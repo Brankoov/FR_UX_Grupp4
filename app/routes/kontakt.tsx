@@ -54,13 +54,33 @@ export default function Kontakt() {
   };
 
   return (
+    
+    
+    
     <div>
+
+     
+      <div>
+      <header className="navbar">
+      
+        
+        <nav>
+          <ul>
+           <a href="/"> Startsida </a>
+            
+            {/* <a href="/meny">Meny</a> */}
+            <a href="/kontakt"> Kontakt </a>
+          </ul>
+        </nav>
+          
+        {/* <img src="images/istockphoto-1382226059-612x612.jpg" alt="Webbutikens logotyp av en bil" class="hero-image"> </img> */}
+    </header>
+      </div>
+
+      <div>
       <h1><strong>Kontakta oss</strong></h1>
-
-      <Link to="/">
-        <button>Startsida</button>
-      </Link>
-
+      </div>
+      
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Namn:</label>
         <input
