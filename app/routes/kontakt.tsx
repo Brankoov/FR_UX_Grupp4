@@ -259,19 +259,8 @@ export default function Kontakt() {
           </label>
         </div>
 
-        {/* <label htmlFor="subject">Ämne:</label>
-        <select
-          id="subject"
-          name="subject"
-          value={formData.subject}
-          onChange={handleChange}
-        >
-          <option value="support">Support</option>
-          <option value="sales">Försäljning</option>
-          <option value="general">Allmän fråga</option>
-        </select> */}
-
-        <label htmlFor="eventAdress">Hur många är ni(typ)?</label>
+      
+        <label htmlFor="eventAdress">Hur många är ni (typ)?</label>
         <input
           type="text"
           id="numberOfPeople"

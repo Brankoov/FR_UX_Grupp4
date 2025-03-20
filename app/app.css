@@ -12,8 +12,12 @@
   width: 100px; /* Justera storleken på loggan */
   height: auto; /* Behåll bildens proportioner */
 }
+.navbar a {
+  margin-right: 30px; /* Justera avståndet mellan länkarna i navbar */
+}
 
 .navbar {
+  
   background-color: transparent;
   color: white;
   position: relative;

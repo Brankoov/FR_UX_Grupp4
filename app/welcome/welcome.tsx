@@ -16,7 +16,7 @@ export function Welcome() {
         </header>
       </div>
       <section className="hero1">
-        <h1>Välkommen till vår foodtruck!</h1>
+        <h1>Välkommen till Sandys foodtruck!</h1>
         <p>Upptäck våra goda rätter och kontakta oss vid frågor.</p>
       </section>
     </main>
