@@ -4,18 +4,27 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Arial', sans-serif;
+}/* Loggan */
+.logo {
+  position: absolute; /* Gör att loggan kan positioneras fritt */
+  left: 20px; /* Lägg loggan lite från vänster */
+  top: 20px; /* Lägg loggan lite från toppen */
+  width: 100px; /* Justera storleken på loggan */
+  height: auto; /* Behåll bildens proportioner */
 }
-.navbar{  
-    background-color: transparent; /* En bakgrundsfärg för menyn */
-    color: white; /* Textfärg */
-    position: relative top; /* Fixerar menyn högst upp */
-    top: 0; /* Placera den högst upp på sidan */
-    left: 0; /* Start från vänster */
-    width: 100%; /* Gör menyn lika bred som sidan */
-    z-index: 0; /* Gör att menyn ligger ovanpå andra element */
-    padding: 30px 0; /* Lite utrymme för länkarna */
-    text-align: center; /* Centrera länkarna horisontellt */
+
+.navbar {
+  background-color: transparent;
+  color: white;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  padding: 30px 0;
+  text-align: center;
 }
+
 .nav-links{
   display: flex;
   flex-direction: column;

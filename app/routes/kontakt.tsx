@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import emailjs from "emailjs-com";
 
+
 export default function Kontakt() {
   const [formData, setFormData] = useState<{
     name: string;
@@ -9,7 +10,7 @@ export default function Kontakt() {
     email: string;
     Telnumber: string;
     eventDate: string;
-    
+    numberOfPeople: string,
     eventAdress: string;
     arrivalTime: string[];
     subject: string;
@@ -21,7 +22,7 @@ export default function Kontakt() {
     email: "",
     Telnumber: "",
     eventDate: "",
-    
+    numberOfPeople: "",
     eventAdress: "",
     arrivalTime: [],
     subject: "",
@@ -77,7 +78,7 @@ export default function Kontakt() {
           email: formData.email,
           Telnumber: formData.Telnumber,
           eventDate: formData.eventDate,
-          
+          numberOfPeople: formData.numberOfPeople,
           eventAdress: formData.eventAdress,
           message: formData.message,
           eventServices: formData.eventServices.join(", "),
@@ -98,31 +99,22 @@ export default function Kontakt() {
   };
 
   return (
-    
-    
-    
-    <div>
-
      
+    <div>     
       <div>
-      <header className="navbar">
-      
-        
-        <nav>
-          <ul>
-           <a href="/"> Startsida </a>
-            
+        <header>
+          <nav className="navbar">
+            <a href="/">Startsida</a>
             {/* <a href="/meny">Meny</a> */}
-            <a href="/kontakt"> Kontakt </a>
-          </ul>
-        </nav>
-          
-        {/* <img src="images/istockphoto-1382226059-612x612.jpg" alt="Webbutikens logotyp av en bil" class="hero-image"> </img> */}
-    </header>
+            <a href="/kontakt">Kontakt</a>
+          </nav>
+          {/* Lägg till loggan här */}
+          <img src="/images/Group4.png" alt="Logga" className="logo" />
+        </header>
       </div>
 
       <div>
-      <h1><strong>Kontakta oss</strong></h1>
+      <h1><strong>Boka Catering</strong></h1>
       </div>
 
       <form onSubmit={handleSubmit}>
@@ -278,6 +270,16 @@ export default function Kontakt() {
           <option value="sales">Försäljning</option>
           <option value="general">Allmän fråga</option>
         </select> */}
+
+        <label htmlFor="eventAdress">Hur många är ni(typ)?</label>
+        <input
+          type="text"
+          id="numberOfPeople"
+          name="numberOfPeople"
+          value={formData.numberOfPeople}
+          onChange={handleChange}
+          required
+        />
 
         <label htmlFor="message">Kommentar/Övriga önskemål</label>
         <textarea
