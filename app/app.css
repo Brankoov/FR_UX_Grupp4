@@ -16,6 +16,7 @@
   margin-right: 30px; /* Justera avståndet mellan länkarna i navbar */
 }
 
+
 .navbar {
   
   background-color: transparent;
@@ -51,73 +52,119 @@ header {
   text-align: center;
 }
 
-h1 {
+/* Layout för kontaktformulär */
+.contact-container {
+  display: flex;
+  justify-content: center; /* Centrerar hela sektionen */
+  gap: 50px; /* Utrymme mellan text och formulär */
+  margin: 50px auto;
+  max-width: 1200px; /* Maximal bredd på sidan */
+}
+.form-title {
+  position: relative;
+  right: 35.6%;
+  font-size: 2rem;
+  color: rgb(1, 1, 1);
+  margin-bottom: 10px;
+
+}
+.info-box {
+  position: absolute;
+  left: 13%;
+  top: 175px; /* Justera efter behov */
+  width: 30%; /* Justerar bredden så den täcker vänstra halvan */
+  background-color: rgba(255, 255, 255, 0.2); /* Lätt transparent bakgrund */
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1 rem;
   text-align: center;
-  font-size: 2.5rem;
-  color: #4CAF50;
 }
 
-/* Formulär-container */
-form {
+.contact-text {
+  flex: 1;
+  font-size: 1.5rem; /* Större text */
+  color: #333;
+  line-height: 1.6;
+}
+
+.contact-form {
   background-color: #ff7700;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 600px;
-  margin: 0 auto;
+  padding: 30px;
+  width: 1200px; /* Gör formuläret bredare */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Skjuter fälten till höger */
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Två kolumner */
+  gap: 20px;
+  width: 50%; /* Endast högra halvan av formuläret */
+  margin-left: auto; /* Flytta fälten till höger */
+  margin-right: 50px; /* Justera höger marginal för bättre placering */
 }
 
-/* Formulärens element */
-label {
-  display: block;
-  font-weight: bold;
-  margin: 10px 0 5px;
+/* Formulärelement */
+.form-group {
+  
+  display: flex;
+  flex-direction: column;
+  
 }
 
 input[type="text"],
 input[type="email"],
-select,
 textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+  width: 100%; /* Låter fälten ta upp hela tilldelade bredden */
+  padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
-}
-
-textarea {
   resize: vertical;
 }
 
-/* Checkbox för integritetspolicy */
-label input[type="checkbox"] {
-  margin-right: 10px;
-}
 
+/* Checkboxar */
+.checkbox-group {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 /* Knapp-styling */
 button[type="submit"] {
   background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 15px;
+  color: white;
+  padding: 10px 90px;
   border: none;
+  position: relative;
+  right: 20%;
   border-radius: 4px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  
 }
 
 button[type="submit"]:hover {
   background-color: #45a049;
 }
 
+
+
 /* Footer-styling */
 footer {
+  position: relative;
+  bottom: 0;
   text-align: center;
-  margin-top: 40px;
-  padding: 20px;
+  margin-top: 45px;
+  padding: 15px;
+  
   background-color: #333;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 footer a {
