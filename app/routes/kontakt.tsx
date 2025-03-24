@@ -112,29 +112,12 @@ export default function Kontakt() {
         </header>
       </div>
 
-      <div className="contact-container">
-      
+      <div className="contact-container">      
 
       <form className="contact-form" onSubmit={handleSubmit}>
         <h1 className="form-title"><strong>Boka Catering</strong></h1>
         
-        <div className="info-box">
-          <p>Sandys Food Truck & Catering erbjuder en minnesvärd matupplevelse för alla typer
-             av evenemang – från bröllop, företagsevent och födelsedagsfester till byggluncher, 
-             studentfiranden och festivaler. Vår flexibilitet gör att vi kan servera var som helst
-             där människor vill äta och en bil kan parkeras – oavsett om det är på din garageuppfart,
-              gatan utanför lägenheten eller på din gräsmatta.
-            Välj x antal rätter från vår omfattande meny, så tillagar och serverar vi dem till dina
-             gäster. Vi tar hand om allt som rör maten, så att du kan fokusera på dina gäster och 
-             njuta av evenemanget. Det enda vi behöver veta är antalet gäster, tidpunkt och plats. 
-             Om du önskar, spelar vi gärna musik medan vi lagar maten för att höja stämningen.
-            Fyll i formuläret här intill, så återkommer vi med ett förslag. Vi ser fram emot att komma 
-            och laga mat på din gata i stan!
-            Vi svarar alltid inom 24 timmar, så vänligen kontrollera din skräppost om du inte fått svar.
-
-          </p>
-        </div>
-
+        
         <div className="form-grid">
         <div className="form-group">
           <label htmlFor="name">Namn*</label>
@@ -144,12 +127,7 @@ export default function Kontakt() {
         <div className="form-group">
           <label htmlFor="lastname">Efternamn*</label>
           <input type="text" id="lastname" name="lastname" placeholder="Efternamn.." value={formData.lastname} onChange={handleChange} required />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="eventAdress">Adress*</label>
-          <input type="text" id="eventAdress" name="eventAdress" value={formData.eventAdress} onChange={handleChange} required />
-        </div>
+        </div>        
 
         <div className="form-group">
           <label htmlFor="Telnumber">Telefonnummer*</label>
@@ -162,13 +140,18 @@ export default function Kontakt() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="numberOfPeople">Hur många är ni (typ)?*</label>
-          <input type="text" id="numberOfPeople" name="numberOfPeople" value={formData.numberOfPeople} onChange={handleChange} required />
+          <label htmlFor="eventAdress">Adress</label>
+          <input type="text" id="eventAdress" name="eventAdress" value={formData.eventAdress} onChange={handleChange} />
         </div>
 
         <div className="form-group">
-          <label htmlFor="eventDate">Vilket datum?*</label>
-          <input type="text" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
+          <label htmlFor="numberOfPeople">Hur många är ni (typ)?</label>
+          <input type="text" id="numberOfPeople" name="numberOfPeople" value={formData.numberOfPeople} onChange={handleChange} />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="eventDate">Vilket datum?</label>
+          <input type="text" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} />
         </div>
 
         <div className="form-group">
@@ -193,10 +176,28 @@ export default function Kontakt() {
 
         <div className="form-group">
           <label htmlFor="message">Kommentar/Övriga önskemål</label>
-          <textarea id="message" name="message" placeholder="Meddelande..." value={formData.message} onChange={handleChange} rows={5}></textarea>
+          <textarea id="message" name="message" placeholder="Skriv önskemål/eventuella allergier..." value={formData.message} onChange={handleChange} rows={5}></textarea>
         </div>
         </div>
         <button type="submit">Skicka</button>
+
+        <div className="info-box">
+          <p>Sandys Food Truck & Catering erbjuder en minnesvärd matupplevelse för alla typer
+             av evenemang – från bröllop, företagsevent och födelsedagsfester till byggluncher, 
+             studentfiranden och festivaler. Vår flexibilitet gör att vi kan servera var som helst
+             där människor vill äta och en bil kan parkeras – oavsett om det är på din garageuppfart,
+              gatan utanför lägenheten eller på din gräsmatta.
+            Välj x antal rätter från vår omfattande meny, så tillagar och serverar vi dem till dina
+             gäster. Vi tar hand om allt som rör maten, så att du kan fokusera på dina gäster och 
+             njuta av evenemanget. Det enda vi behöver veta är antalet gäster, tidpunkt och plats. 
+             Om du önskar, spelar vi gärna musik medan vi lagar maten för att höja stämningen.
+            Fyll i formuläret här intill, så återkommer vi med ett förslag. Vi ser fram emot att komma 
+            och laga mat på din gata i stan!
+            Vi svarar alltid inom 24 timmar, så vänligen kontrollera din skräppost om du inte fått svar.
+
+          </p>
+        </div>
+        
       </form>
     </div>
     

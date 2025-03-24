@@ -71,7 +71,7 @@ header {
 .info-box {
   position: absolute;
   left: 13%;
-  top: 175px; /* Justera efter behov */
+  top: 195px; /* Justera efter behov */
   width: 30%; /* Justerar bredden så den täcker vänstra halvan */
   background-color: rgba(255, 255, 255, 0.2); /* Lätt transparent bakgrund */
   padding: 20px;
@@ -174,4 +174,47 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 20px;
+  }
+  .contact-form {
+    margin-top: 1px;
+  }
+
+  /* Gör så att fälten är i en kolumn */
+  .form-grid {
+    width: 100%;
+    grid-template-columns: 1fr; /* Fälten staplas på varandra */
+  }
+  .form-title{
+    position: relative;
+    left: 1%;
+  }
+
+  /* Info-texten ska hamna längst ner */
+  .info-box {
+    margin-top: 30px;  /* Lite mellanrum från knappen */
+    width: 100%;
+    text-align: center;  /* Centrera texten om du vill */
+    position: relative; /* Se till att texten är i flödet */
+    top: 10px; /* Säkerställer att texten inte ligger för högt upp */
+    left: 0%;
+  }
+
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 90px;
+    border: none;
+    position: relative;
+    right: 1%;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;  /* Se till att knappen är en block-level element */
+    
+  }
 }
