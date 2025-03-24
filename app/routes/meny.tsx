@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
+export default function Meny() {
+    return (
 
-
-export function Welcome() {
-  return (
-    <main>
-      <div>
+        
+        <div>
         <header>
+            <h1>Vår meny</h1>
           <nav className="navbar">
             <a href="/">Startsida</a>
             {/* <a href="/meny">Meny</a> */}
@@ -16,10 +15,6 @@ export function Welcome() {
           <img src="/images/Group4.png" alt="Logga" className="logo" />
         </header>
       </div>
-      <section className="hero1">
-        <h1>Välkommen till Sandys foodtruck!</h1>
-        <p>Upptäck våra goda rätter och kontakta oss vid frågor.</p>
-      </section>
-    </main>
-  );
-}
+
+    );
+  }
