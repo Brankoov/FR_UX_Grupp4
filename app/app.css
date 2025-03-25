@@ -197,6 +197,10 @@ footer a:hover {
   .contact-container {
     padding: 20px;
   }
+  .logo{
+    width: 115px; /* Justera storleken på loggan */
+    height: auto; /* Behåll bildens proportioner */
+  }
   .contact-form {
     margin-top: 1px;
   }
