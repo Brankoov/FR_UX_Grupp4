@@ -212,19 +212,13 @@ export default function Kontakt() {
         <button type="submit">Skicka</button>
 
         <div className="info-box">
-          <p>Sandys Food Truck & Catering erbjuder en minnesvärd matupplevelse för alla typer
-             av evenemang – från bröllop, företagsevent och födelsedagsfester till byggluncher, 
-             studentfiranden och festivaler. Vår flexibilitet gör att vi kan servera var som helst
-             där människor vill äta och en bil kan parkeras – oavsett om det är på din garageuppfart,
-              gatan utanför lägenheten eller på din gräsmatta.
-            Välj x antal rätter från vår omfattande meny, så tillagar och serverar vi dem till dina
-             gäster. Vi tar hand om allt som rör maten, så att du kan fokusera på dina gäster och 
-             njuta av evenemanget. Det enda vi behöver veta är antalet gäster, tidpunkt och plats. 
-             Om du önskar, spelar vi gärna musik medan vi lagar maten för att höja stämningen.
-            Fyll i formuläret här intill, så återkommer vi med ett förslag. Vi ser fram emot att komma 
-            och laga mat på din gata i stan!
-            Vi svarar alltid inom 24 timmar, så vänligen kontrollera din skräppost om du inte fått svar.
-
+          <p>
+            Upptäck en värld av passion och tradition – två unika smakupplevelser!
+             Med en kärlek till både det genuina italienska köket och de djupa smakerna 
+             från Sveriges rika natur erbjuder jag två distinkta matkoncept – vid olika tillfällen,
+             men alltid med samma passion. Oavsett vilket koncept du möts av, kan du räkna med en måltid 
+             lagad med omsorg och hjärta. Välkommen att uppleva där tradition och passion möts.
+             Vi ses vid food trucken!
           </p>
         </div>
         
