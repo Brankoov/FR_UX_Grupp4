@@ -1,16 +1,14 @@
 
-
 const Header = () => {
   return (
-    <header className="navbar">
-      <img src="/images/Group4.png" alt="Logga" className="logo" />
-      <nav>
-        <ul>
-          <li><a href="/">Startsida</a></li>
-          <li><a href="/kontakt">Kontakt</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header>
+    <nav className="navbar">
+      <a href="/">Startsida</a>            
+      <a href="/meny">Meny</a>
+      <a href="/kontakt">Boka catering</a>            
+    </nav>          
+    <img src="/images/Group4.png" alt="Logga" className="logo" />
+  </header>
   );
 }
 
