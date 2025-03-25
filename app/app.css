@@ -9,7 +9,7 @@
   position: absolute; /* Gör att loggan kan positioneras fritt */
   left: 20px; /* Lägg loggan lite från vänster */
   top: 20px; /* Lägg loggan lite från toppen */
-  width: 100px; /* Justera storleken på loggan */
+  width: 250px; /* Justera storleken på loggan */
   height: auto; /* Behåll bildens proportioner */
 }
 .navbar a {
