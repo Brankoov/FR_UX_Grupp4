@@ -32,6 +32,8 @@ export default function Kontakt() {
     eventServices: [], // Tom array från början
   });
 
+  const [errors, setErrors] = useState<any>({});
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -67,7 +69,35 @@ export default function Kontakt() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formData)
+    console.log("Form submitted!");
+    console.log("Formdata:", formData)
+
+     // Skapa ett objekt för att hålla valideringsfel
+  const validationErrors: any = {};
+
+   // E-post validering
+   if (!formData.email.includes('@')) {
+    validationErrors.email = 'E-post måste innehålla ett @';
+  }
+
+  // Telefonnummer validering (bara siffror och rätt längd)
+  if (!/^\d{10}$/.test(formData.Telnumber)) {
+    validationErrors.Telnumber = 'Telefonnummer måste vara 10 siffror';
+    alert("Telefonnummer måster vara 10 siffror")
+  }
+
+  // Datumvalidering (dd/mm/åå) (dd/mm/åååå)
+  if (!/^\d{2}\/\d{2}\/\d{2,4}$/.test(formData.eventDate)) {
+    validationErrors.eventDate = 'Datumet måste vara i formatet dd/mm/åå eller dd/mm/åååå';
+    alert("Datumet måste vara i formatet dd/mm/åå eller dd/mm/åååå")
+  }
+
+  // Om det finns några fel, visa felmeddelanden och avbryt formulärskickningen
+  if (Object.keys(validationErrors).length > 0) {
+    console.log("Validation errors:", validationErrors);
+    setErrors(validationErrors);  
+    return;
+  }
 
     // Skicka data till EmailJS
     emailjs
@@ -90,12 +120,12 @@ export default function Kontakt() {
       )
       .then(
         (result) => {
+          console.log("Email sent successfully:", result); // Logga resultatet om mailet skickades
           alert("Formuläret skickades!");
-          console.log(result.text);
         },
         (error) => {
+          console.log("Error sending email:", error); // Logga felmeddelandet här
           alert("Något gick fel. Försök igen senare.");
-          console.log(error.text);
         }
       );
   };
@@ -117,21 +147,25 @@ export default function Kontakt() {
         <div className="form-group">
           <label htmlFor="name">Namn*</label>
           <input type="text" id="name" name="name" placeholder="Förnamn.." value={formData.name} onChange={handleChange} required />
+          {errors.name && <p className="error">{errors.name}</p>}
         </div>
 
         <div className="form-group">
           <label htmlFor="lastname">Efternamn*</label>
           <input type="text" id="lastname" name="lastname" placeholder="Efternamn.." value={formData.lastname} onChange={handleChange} required />
+          {errors.lastname && <p className="error">{errors.lastname}</p>}
         </div>        
 
         <div className="form-group">
           <label htmlFor="Telnumber">Telefonnummer*</label>
           <input type="text" id="Telnumber" name="Telnumber" value={formData.Telnumber} onChange={handleChange} required />
+          {errors.Telnumber && <p className="error">{errors.Telnumber}</p>}
         </div>
 
         <div className="form-group">
           <label htmlFor="email">E-post*</label>
           <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+          {errors.email && <p className="error">{errors.email}</p>}
         </div>
 
         <div className="form-group">
@@ -145,8 +179,9 @@ export default function Kontakt() {
         </div>
 
         <div className="form-group">
-          <label htmlFor="eventDate">Vilket datum?</label>
+          <label htmlFor="eventDate">Vilket datum?*</label>
           <input type="text" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} />
+          {errors.eventDate && <p className="error">{errors.eventDate}</p>}
         </div>
 
         <div className="form-group">
@@ -202,4 +237,6 @@ export default function Kontakt() {
     </div>
   );
 }
+
+
 
