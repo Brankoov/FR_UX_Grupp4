@@ -88,7 +88,7 @@ header {
 .info-box {
   position: absolute;
   left: 13%;
-  top: 195px; /* Justera efter behov */
+  top: 217px; /* Justera efter behov */
   width: 30%; /* Justerar bredden så den täcker vänstra halvan */
   background-color: rgba(255, 255, 255, 0.2); /* Lätt transparent bakgrund */
   padding: 20px;
