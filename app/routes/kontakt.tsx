@@ -214,9 +214,14 @@ export default function Kontakt() {
         <div className="info-box">
           <p>
             Upptäck en värld av passion och tradition – två unika smakupplevelser!
+            </p><br></br>
+            <p>
              Med en kärlek till både det genuina italienska köket och de djupa smakerna 
              från Sveriges rika natur erbjuder jag två distinkta matkoncept – vid olika tillfällen,
-             men alltid med samma passion. Oavsett vilket koncept du möts av, kan du räkna med en måltid 
+             men alltid med samma passion.
+             </p><br></br>
+             <p>
+             Oavsett vilket koncept du möts av, kan du räkna med en måltid 
              lagad med omsorg och hjärta. Välkommen att uppleva där tradition och passion möts.
              Vi ses vid food trucken!
           </p>

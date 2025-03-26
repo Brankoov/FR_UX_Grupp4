@@ -97,12 +97,12 @@ header {
   left: 13%;
   top: 288px; /* Justera efter behov */
   width: 30%; /* Justerar bredden så den täcker vänstra halvan */
-  background-color: rgba(255, 255, 255, 0.2); /* Lätt transparent bakgrund */
+  background-color: #F6E5C9; 
   padding: 20px;
   border-radius: 8px;
-  color: white;
+  color: #301F06;
   font-family: 'Inter', sans-serif;
-  font-size: 1.07rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 
