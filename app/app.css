@@ -249,8 +249,8 @@ footer a:hover {
 
   .button-container {
     display: flex;
-    justify-content: center; /* Centrerar knappen horisontellt */
-    width: 100%;  /* Säkerställer att container är 100% bred */
+    position: relative;
+    left: 41px;
     margin-top: 20px;  /* Justera om du behöver lite mellanrum ovanför knappen */
     padding-left: 10px; /* Lägg till lite padding om det behövs */
   }
