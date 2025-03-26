@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  
 }/* Loggan */
 .logo {
   position: absolute; /* Gör att loggan kan positioneras fritt */
@@ -29,17 +29,20 @@
   padding: 30px 0;
   text-align:end;
   
+  
 }
 .navbar a {
   display: inline-block;
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 0px;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.2); /* Lätt transparent vit */
   color: rgb(5, 98, 31);
   text-decoration: none;
-  font-weight: bold;
+  
   transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Katibeh';
+  font-size: 60px;
 }
 
 .navbar a:hover {
@@ -56,8 +59,8 @@
 
 /* Styling för hela sidan */
 body {
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: #FFFBF5;
+  
   line-height: 1.6;
   padding: 20px;
 }
@@ -68,6 +71,8 @@ header {
 }
 .hero1{
   text-align: center;
+  font-family: 'Katibeh';
+  font-size: 96px;
 }
 
 /* Layout för kontaktformulär */
@@ -75,6 +80,7 @@ header {
   display: flex;
   justify-content: center; /* Centrerar hela sektionen */
   gap: 50px; /* Utrymme mellan text och formulär */
+  
   margin: 50px auto;
   max-width: 1200px; /* Maximal bredd på sidan */
 }
@@ -82,32 +88,34 @@ header {
   position: relative;
   right: 35.6%;
   font-size: 2rem;
-  color: rgb(1, 1, 1);
+  color: #FFFFFF;
   margin-bottom: 10px;
 
 }
 .info-box {
   position: absolute;
   left: 13%;
-  top: 217px; /* Justera efter behov */
+  top: 288px; /* Justera efter behov */
   width: 30%; /* Justerar bredden så den täcker vänstra halvan */
   background-color: rgba(255, 255, 255, 0.2); /* Lätt transparent bakgrund */
   padding: 20px;
   border-radius: 8px;
   color: white;
+  font-family: 'Inter', sans-serif;
   font-size: 1.07rem;
   text-align: center;
 }
 
 .contact-text {
+  font-family: 'Inter', sans-serif;
   flex: 1;
   font-size: 1.5rem; /* Större text */
-  color: #333;
+  color: #FFFFFF;
   line-height: 1.6;
 }
 
 .contact-form {
-  background-color: #ff7700;
+  background-color: #3C4D0C;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -127,7 +135,7 @@ header {
 
 /* Formulärelement */
 .form-group {
-  
+  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   
@@ -153,13 +161,14 @@ textarea {
 }
 /* Knapp-styling */
 button[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
+  background-color: #FFC13B;
+  color: #301f06;
   padding: 10px 90px;
   border: none;
   position: relative;
   right: 20%;
   border-radius: 4px;
+  font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
   margin-top: 10px;
@@ -167,7 +176,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #d99605;
 }
 
 
