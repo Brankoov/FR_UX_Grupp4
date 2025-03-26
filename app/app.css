@@ -20,14 +20,14 @@
 .navbar {
   
   background-color: transparent;
-  color: white;
+  
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 0;
   padding: 30px 0;
-  text-align:end;
+  text-align: end;
   
   
 }
@@ -82,7 +82,7 @@ header {
   gap: 50px; /* Utrymme mellan text och formulär */
   
   margin: 50px auto;
-  max-width: 1200px; /* Maximal bredd på sidan */
+  max-width: 1400px; /* Maximal bredd på sidan */
 }
 .form-title {
   position: relative;
@@ -119,7 +119,7 @@ header {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 30px;
-  width: 1200px; /* Gör formuläret bredare */
+  width: 1300px; /* Gör formuläret bredare */
   display: flex;
   flex-direction: column;
   align-items: flex-end; /* Skjuter fälten till höger */
@@ -203,12 +203,27 @@ footer a:hover {
   text-decoration: underline;
 }
 @media (max-width: 768px) {
+  .navbar {
+    text-align:center;
+    position: relative;
+    top: 80px;
+    left: 0;
+  }
+  .navbar a{
+    font-size: 30px;
+  }
+  .contact-form{
+    
+  }
   .contact-container {
     padding: 20px;
   }
   .logo{
-    width: 115px; /* Justera storleken på loggan */
+    width: 220px; /* Justera storleken på loggan */
     height: auto; /* Behåll bildens proportioner */
+    position: absolute;
+    left: 80px; 
+    top: 25px; 
   }
   .contact-form {
     margin-top: 1px;
@@ -221,7 +236,7 @@ footer a:hover {
   }
   .form-title{
     position: relative;
-    left: 1%;
+    right: 14.6%;
   }
 
   /* Info-texten ska hamna längst ner */
@@ -235,8 +250,8 @@ footer a:hover {
   }
 
   button[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #FFC13B;
+    color: #301f06;
     padding: 10px 90px;
     border: none;
     position: relative;
