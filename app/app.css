@@ -159,6 +159,7 @@ textarea {
   flex-direction: column;
   gap: 5px;
 }
+
 /* Knapp-styling */
 button[type="submit"] {
   background-color: #FFC13B;
@@ -166,7 +167,7 @@ button[type="submit"] {
   padding: 10px 90px;
   border: none;
   position: relative;
-  right: 20%;
+  right: 100%;
   border-radius: 4px;
   font-weight: bold;
   font-size: 1rem;
