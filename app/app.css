@@ -65,28 +65,27 @@ body {
 
 @media (max-width: 768px) {
   .main-container {
-    flex-direction: column; /* Ändra layouten för mobil */
-    font-size: 48px; /* Minska textstorlek */
+    flex-direction: column;
+    font-size: 48px;
     min-height: auto;
   }
 
   .hero1 {
-    font-size: 30px; /* Gör rubriken mindre på mobil */
+    font-size: 30px;
     padding: 10px;
   }
 
   .matbild1-image {
-    width: 100%; /* Full bredd på mobil */
-    max-width: 400px; /* Begränsa maxbredd */
+    width: 100%;
+    max-width: 400px;
   }
 
   .kontakt-button {
-    font-size: 16px; /* Gör knappen lite mindre */
+    font-size: 16px;
     padding: 10px 20px;
   }
 }
 
-/* För ännu mindre skärmar (t.ex. väldigt små mobiler) */
 @media (max-width: 480px) {
   .main-container {
     font-size: 32px;
