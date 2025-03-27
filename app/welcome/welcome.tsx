@@ -10,7 +10,7 @@ export function Welcome() {
       </div>
       <section className="hero1">
         <h1>
-          upptäck en värld av passion och tadition- två unika smakupplevelser
+          Upptäck en värld av passion och tradition- två unika smakupplevelser
         </h1>
         <div className="main-container">
           <img
