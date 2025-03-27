@@ -23,7 +23,50 @@ html, body {
   font-size: 96px;
   min-height: 100vh;
   margin-bottom: 100px;
+  position: relative;
+  display: flex;
 }
+.hero1 {
+
+  text-align: center;
+  font-family: 'Katibeh';
+  font-size: 50px;
+
+}
+
+.matbild1-image {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.kontakt-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(17, 216, 33, 0.8);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.kontakt-button:hover {
+  background-color: rgba(119, 0, 255, 0.9);
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.kontakt-button:active {
+  background-color: rgb(81, 0, 243);
+}
+
 
 /* Loggan */
 .logo {
@@ -290,40 +333,3 @@ footer a:hover {
   }
 }
 
-.image-container {
-  position: relative;
-  display: inline-block;
-}
-
-.matbild1-image {
-  width: 90%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.kontakt-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(17, 216, 33, 0.8);
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.kontakt-button:hover {
-  background-color: rgba(119, 0, 255, 0.9);
-  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-.kontakt-button:active {
-  background-color: rgb(81, 0, 243);
-}
