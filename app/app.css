@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
   
 }
 html, body {
@@ -36,9 +37,7 @@ html, body {
   margin-right: 30px; /* Justera avståndet mellan länkarna i navbar */
 }
 
-
 .navbar {
-  
   background-color: transparent;
   
   position: relative;
@@ -71,10 +70,9 @@ html, body {
   transform: scale(1.2);
 }
 
-.nav-links{
+.nav-links {
   display: flex;
   flex-direction: column;
-  
 }
 
 /* Styling för hela sidan */
@@ -84,7 +82,6 @@ header {
   text-align: center;
   margin-bottom: 30px;
 }
-
 
 /* Layout för kontaktformulär */
 .contact-container {
@@ -101,7 +98,6 @@ header {
   font-size: 2rem;
   color: #FFFFFF;
   margin-bottom: 10px;
-
 }
 .info-box {
   position: absolute;
@@ -150,7 +146,6 @@ header {
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
-  
 }
 
 input[type="text"],
@@ -162,7 +157,6 @@ textarea {
   border-radius: 4px;
   resize: vertical;
 }
-
 
 /* Checkboxar */
 .checkbox-group {
@@ -185,14 +179,11 @@ button[type="submit"] {
   font-size: 1rem;
   cursor: pointer;
   margin-top: 10px;
-  
 }
 
 button[type="submit"]:hover {
   background-color: #d99605;
 }
-
-
 
 /* Footer-styling */
 footer {
@@ -262,16 +253,16 @@ footer a:hover {
     width: 100%;
     grid-template-columns: 1fr; /* Fälten staplas på varandra */
   }
-  .form-title{
+  .form-title {
     position: relative;
     right: 14.6%;
   }
 
   /* Info-texten ska hamna längst ner */
   .info-box {
-    margin-top: 30px;  /* Lite mellanrum från knappen */
+    margin-top: 30px; /* Lite mellanrum från knappen */
     width: 100%;
-    text-align: center;  /* Centrera texten om du vill */
+    text-align: center; /* Centrera texten om du vill */
     position: relative; /* Se till att texten är i flödet */
     top: 10px; /* Säkerställer att texten inte ligger för högt upp */
     left: 0%;
@@ -297,4 +288,42 @@ footer a:hover {
     margin-top: 10px;
     
   }
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.matbild1-image {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.kontakt-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(17, 216, 33, 0.8);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.kontakt-button:hover {
+  background-color: rgba(119, 0, 255, 0.9);
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.kontakt-button:active {
+  background-color: rgb(81, 0, 243);
 }
