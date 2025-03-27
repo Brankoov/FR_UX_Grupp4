@@ -138,7 +138,7 @@ header {
 .form-title {
   font-family: 'Katibeh';
   position: relative;
-  right: 31%;
+  right: 23.1%;
   font-size: 59px;
   color: #FFFFFF;
   margin-bottom: 10px;
@@ -252,18 +252,24 @@ footer {
   
 }
 .footer-left {
-  font-size: 1.5rem;
-  font-weight: bold;
+  position: relative;
+  bottom: 50px;
+  /* font-family: 'Katibeh'; */
+  font-size: 30px;
+  
   text-align: left;
 }
 
 .footer-center {
-  text-align: center;
-  flex-grow: 1; /* Gör att mitteninnehållet kan centreras */
+  position: relative;
+  bottom: 55px;
+  left: 25%;
+  font-size: 20px;
+
 }
 
 .footer-center p {
-  margin: 5px 0; /* Mellanrum mellan raderna */
+  margin: 10px 0; /* Mellanrum mellan raderna */
 }
 
 footer a:hover {

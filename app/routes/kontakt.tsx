@@ -140,7 +140,7 @@ export default function Kontakt() {
       <div className="contact-container">      
 
       <form className="contact-form" onSubmit={handleSubmit}>
-        <h1 className="form-title"><strong>Boka Catering</strong></h1>
+        <h1 className="form-title"><strong>Bokningsförfrågan</strong></h1>
         
         
         <div className="form-grid">
@@ -187,7 +187,7 @@ export default function Kontakt() {
         <div className="form-group">
           <label>Eventtjänster</label>
           <div className="checkbox-group">
-            <label><input type="checkbox" name="eventServices" value="Foodtruck Catering" checked={formData.eventServices.includes("Foodtruck Catering")} onChange={handleCheckboxChange} /> Foodtruck Catering</label>
+            <label><input type="checkbox" name="eventServices" value="Foodtruck Catering" checked={formData.eventServices.includes("Foodtruck Catering")} onChange={handleCheckboxChange} /> Foodtruck</label>
             <label><input type="checkbox" name="eventServices" value="Catering" checked={formData.eventServices.includes("Catering")} onChange={handleCheckboxChange} /> Catering</label>
           </div>
         </div>
