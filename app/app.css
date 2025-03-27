@@ -340,7 +340,9 @@ footer a:hover {
   }
   .info-image {
     position: relative; /* Ta bort absolut positionering */
-    bottom: 0; /* Återställ tidigare inställningar */
+    bottom: 0px; /* Återställ tidigare inställningar */
+    top: 20px;
+    left: 1px;
     margin-top: 20px; /* Lägg till lite avstånd från infoboxen */
     width: 100%; /* Anpassa bredden så den passar */
     display: block;
