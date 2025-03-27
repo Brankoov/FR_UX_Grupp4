@@ -206,7 +206,7 @@ export default function Kontakt() {
 
         <div className="form-group">
           <label htmlFor="message">Kommentar/Övriga önskemål</label>
-          <textarea id="message" name="message" placeholder="Skriv önskemål/eventuella allergier..." value={formData.message} onChange={handleChange} rows={5}></textarea>
+          <textarea id="message" name="message" placeholder="Har du allergen/allergener eller specifikt önskemål angående bokningen eller maten fyll i det här!" value={formData.message} onChange={handleChange} rows={5}></textarea>
          </div>
         </div>
         <div className="button-container">

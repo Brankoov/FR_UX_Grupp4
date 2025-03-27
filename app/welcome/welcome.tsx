@@ -8,7 +8,7 @@ export function Welcome() {
       <div>
        <Header />
       </div>
-      <section className="hero1">
+      <section className="main-container">
         <h1>Välkommen till Sandys foodtruck!</h1>
         <p>Upptäck våra goda rätter och kontakta oss vid frågor.</p>
       </section>

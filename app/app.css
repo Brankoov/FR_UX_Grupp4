@@ -4,7 +4,27 @@
   padding: 0;
   box-sizing: border-box;
   
-}/* Loggan */
+}
+html, body {
+  background-color: #FFFBF5;
+  height: 100%;
+  
+  
+  line-height: 1.6;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container{
+  text-align: center;
+  font-family: 'Katibeh';
+  font-size: 96px;
+  min-height: 100vh;
+  margin-bottom: 100px;
+}
+
+/* Loggan */
 .logo {
   position: absolute; /* Gör att loggan kan positioneras fritt */
   left: 20px; /* Lägg loggan lite från vänster */
@@ -58,22 +78,13 @@
 }
 
 /* Styling för hela sidan */
-body {
-  background-color: #FFFBF5;
-  
-  line-height: 1.6;
-  padding: 20px;
-}
+
 
 header {
   text-align: center;
   margin-bottom: 30px;
 }
-.hero1{
-  text-align: center;
-  font-family: 'Katibeh';
-  font-size: 96px;
-}
+
 
 /* Layout för kontaktformulär */
 .contact-container {
@@ -95,7 +106,7 @@ header {
 .info-box {
   position: absolute;
   left: 13%;
-  top: 288px; /* Justera efter behov */
+  top: 273px; /* Justera efter behov */
   width: 30%; /* Justerar bredden så den täcker vänstra halvan */
   background-color: #F6E5C9; 
   padding: 20px;
@@ -123,6 +134,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-end; /* Skjuter fälten till höger */
+  margin-bottom: 100px;
 }
 .form-grid {
   display: grid;
@@ -184,23 +196,40 @@ button[type="submit"]:hover {
 
 /* Footer-styling */
 footer {
-  position: relative;
-  bottom: 0;
-  text-align: center;
-  margin-top: 45px;
-  padding: 15px;
-  
-  background-color: #333;
+  margin-top: auto; /* Trycker ner footern */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 100px;
+  background-color: #3C4D0C;
   color: #fff;
-  border-radius: 10px;
+  
+  
+}
+.footer-left {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;
 }
 
-footer a {
-  color: #4CAF50;
-  text-decoration: none;
+.footer-center {
+  text-align: center;
+  flex-grow: 1; /* Gör att mitteninnehållet kan centreras */
+}
+
+.footer-center p {
+  margin: 5px 0; /* Mellanrum mellan raderna */
 }
 
 footer a:hover {
+  text-decoration: underline;
+}
+.phone-link {
+  color: white;
+  text-decoration: none;
+}
+
+.phone-link:hover {
   text-decoration: underline;
 }
 @media (max-width: 768px) {
