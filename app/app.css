@@ -251,7 +251,7 @@ footer a:hover {
   .button-container {
     display: flex;
     position: relative;
-    left: 41px;
+    left: 225px;
     margin-top: 20px;  /* Justera om du behöver lite mellanrum ovanför knappen */
     padding-left: 10px; /* Lägg till lite padding om det behövs */
   }
