@@ -3,8 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}/* Loggan */
+  font-family: "Arial", sans-serif;
+} /* Loggan */
 .logo {
   position: absolute; /* Gör att loggan kan positioneras fritt */
   left: 20px; /* Lägg loggan lite från vänster */
@@ -16,9 +16,7 @@
   margin-right: 30px; /* Justera avståndet mellan länkarna i navbar */
 }
 
-
 .navbar {
-  
   background-color: transparent;
   color: white;
   position: relative;
@@ -30,10 +28,9 @@
   text-align: center;
 }
 
-.nav-links{
+.nav-links {
   display: flex;
   flex-direction: column;
-  
 }
 
 /* Styling för hela sidan */
@@ -48,7 +45,7 @@ header {
   text-align: center;
   margin-bottom: 30px;
 }
-.hero1{
+.hero1 {
   text-align: center;
 }
 
@@ -66,7 +63,6 @@ header {
   font-size: 2rem;
   color: rgb(1, 1, 1);
   margin-bottom: 10px;
-
 }
 .info-box {
   position: absolute;
@@ -109,10 +105,8 @@ header {
 
 /* Formulärelement */
 .form-group {
-  
   display: flex;
   flex-direction: column;
-  
 }
 
 input[type="text"],
@@ -125,7 +119,6 @@ textarea {
   resize: vertical;
 }
 
-
 /* Checkboxar */
 .checkbox-group {
   width: 70%;
@@ -135,7 +128,7 @@ textarea {
 }
 /* Knapp-styling */
 button[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 10px 90px;
   border: none;
@@ -145,14 +138,11 @@ button[type="submit"] {
   font-size: 1rem;
   cursor: pointer;
   margin-top: 10px;
-  
 }
 
 button[type="submit"]:hover {
   background-color: #45a049;
 }
-
-
 
 /* Footer-styling */
 footer {
@@ -161,14 +151,14 @@ footer {
   text-align: center;
   margin-top: 45px;
   padding: 15px;
-  
+
   background-color: #333;
   color: #fff;
   border-radius: 10px;
 }
 
 footer a {
-  color: #4CAF50;
+  color: #4caf50;
   text-decoration: none;
 }
 
@@ -188,23 +178,23 @@ footer a:hover {
     width: 100%;
     grid-template-columns: 1fr; /* Fälten staplas på varandra */
   }
-  .form-title{
+  .form-title {
     position: relative;
     left: 1%;
   }
 
   /* Info-texten ska hamna längst ner */
   .info-box {
-    margin-top: 30px;  /* Lite mellanrum från knappen */
+    margin-top: 30px; /* Lite mellanrum från knappen */
     width: 100%;
-    text-align: center;  /* Centrera texten om du vill */
+    text-align: center; /* Centrera texten om du vill */
     position: relative; /* Se till att texten är i flödet */
     top: 10px; /* Säkerställer att texten inte ligger för högt upp */
     left: 0%;
   }
 
   button[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
     padding: 10px 90px;
     border: none;
@@ -214,7 +204,44 @@ footer a:hover {
     font-size: 1rem;
     cursor: pointer;
     margin-top: 10px;
-    display: block;  /* Se till att knappen är en block-level element */
-    
+    display: block; /* Se till att knappen är en block-level element */
   }
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.matbild1-image {
+  width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.kontakt-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(17, 216, 33, 0.8);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.kontakt-button:hover {
+  background-color: rgba(119, 0, 255, 0.9);
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.kontakt-button:active {
+  background-color: rgb(81, 0, 243);
 }
