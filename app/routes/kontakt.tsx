@@ -227,8 +227,9 @@ export default function Kontakt() {
              lagad med omsorg och hjärta. Välkommen att uppleva där tradition och passion möts.
              Vi ses vid food trucken!
           </p>
+          
         </div>
-        
+        <img src="/images/formulärbild2.png" alt="Foodtruck" className="info-image" />
       </form>
     </div>
     

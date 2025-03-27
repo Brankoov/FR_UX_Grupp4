@@ -73,7 +73,7 @@ html, body {
   position: absolute; /* Gör att loggan kan positioneras fritt */
   left: 20px; /* Lägg loggan lite från vänster */
   top: 20px; /* Lägg loggan lite från toppen */
-  width: 250px; /* Justera storleken på loggan */
+  width: 300px; /* Justera storleken på loggan */
   height: auto; /* Behåll bildens proportioner */
 }
 .navbar a {
@@ -136,16 +136,17 @@ header {
   max-width: 1400px; /* Maximal bredd på sidan */
 }
 .form-title {
+  font-family: 'Katibeh';
   position: relative;
-  right: 35.6%;
-  font-size: 2rem;
+  right: 31%;
+  font-size: 59px;
   color: #FFFFFF;
   margin-bottom: 10px;
 }
 .info-box {
   position: absolute;
-  left: 13%;
-  top: 273px; /* Justera efter behov */
+  left: 11%;
+  top: 322px; /* Justera efter behov */
   width: 30%; /* Justerar bredden så den täcker vänstra halvan */
   background-color: #F6E5C9; 
   padding: 20px;
@@ -154,6 +155,15 @@ header {
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   text-align: center;
+}
+.info-image {
+  position: absolute;
+  left: 13%; /* Samma som .info-box */
+  top: 640px;
+  
+  width: 400px;
+  max-width: 500px;
+  height: 350px;
 }
 
 .contact-text {
@@ -168,20 +178,21 @@ header {
   background-color: #3C4D0C;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  padding: 50px;
   width: 1300px; /* Gör formuläret bredare */
   display: flex;
   flex-direction: column;
   align-items: flex-end; /* Skjuter fälten till höger */
-  margin-bottom: 100px;
+  margin-bottom: 120px;
+  padding-bottom: 65px;
 }
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Två kolumner */
-  gap: 20px;
+  gap: 25px;
   width: 50%; /* Endast högra halvan av formuläret */
   margin-left: auto; /* Flytta fälten till höger */
-  margin-right: 50px; /* Justera höger marginal för bättre placering */
+  margin-right: 35px; /* Justera höger marginal för bättre placering */
 }
 
 /* Formulärelement */
@@ -221,7 +232,7 @@ button[type="submit"] {
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 button[type="submit"]:hover {
