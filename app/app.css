@@ -326,7 +326,7 @@ footer a:hover {
   }
   .form-title {
     position: relative;
-    right: 14.6%;
+    right: 1%;
   }
 
   /* Info-texten ska hamna längst ner */
@@ -337,6 +337,13 @@ footer a:hover {
     position: relative; /* Se till att texten är i flödet */
     top: 10px; /* Säkerställer att texten inte ligger för högt upp */
     left: 0%;
+  }
+  .info-image {
+    position: relative; /* Ta bort absolut positionering */
+    bottom: 0; /* Återställ tidigare inställningar */
+    margin-top: 20px; /* Lägg till lite avstånd från infoboxen */
+    width: 100%; /* Anpassa bredden så den passar */
+    display: block;
   }
 
   .button-container {
