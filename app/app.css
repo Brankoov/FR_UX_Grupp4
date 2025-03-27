@@ -3,23 +3,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
-  
 }
-html, body {
-  background-color: #FFFBF5;
+html,
+body {
+  background-color: #fffbf5;
   height: 100%;
-  
-  
+
   line-height: 1.6;
-  
+
   display: flex;
   flex-direction: column;
 }
 
-.main-container{
+.main-container {
   text-align: center;
-  font-family: 'Katibeh';
+  font-family: "Katibeh";
   font-size: 96px;
   min-height: 100vh;
   margin-bottom: 100px;
@@ -27,11 +25,9 @@ html, body {
   display: flex;
 }
 .hero1 {
-
   text-align: center;
-  font-family: 'Katibeh';
+  font-family: "Katibeh";
   font-size: 50px;
-
 }
 
 .matbild1-image {
@@ -67,7 +63,6 @@ html, body {
   background-color: rgb(81, 0, 243);
 }
 
-
 /* Loggan */
 .logo {
   position: absolute; /* Gör att loggan kan positioneras fritt */
@@ -82,7 +77,7 @@ html, body {
 
 .navbar {
   background-color: transparent;
-  
+
   position: relative;
   top: 0;
   left: 0;
@@ -90,8 +85,6 @@ html, body {
   z-index: 0;
   padding: 30px 0;
   text-align: end;
-  
-  
 }
 .navbar a {
   display: inline-block;
@@ -101,9 +94,9 @@ html, body {
   background-color: rgba(255, 255, 255, 0.2); /* Lätt transparent vit */
   color: rgb(5, 98, 31);
   text-decoration: none;
-  
+
   transition: background-color 0.3s ease, transform 0.2s ease;
-  font-family: 'Katibeh';
+  font-family: "Katibeh";
   font-size: 60px;
 }
 
@@ -120,7 +113,6 @@ html, body {
 
 /* Styling för hela sidan */
 
-
 header {
   text-align: center;
   margin-bottom: 30px;
@@ -131,16 +123,16 @@ header {
   display: flex;
   justify-content: center; /* Centrerar hela sektionen */
   gap: 50px; /* Utrymme mellan text och formulär */
-  
+
   margin: 50px auto;
   max-width: 1400px; /* Maximal bredd på sidan */
 }
 .form-title {
-  font-family: 'Katibeh';
+  font-family: "Katibeh";
   position: relative;
   right: 23.1%;
   font-size: 59px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 .info-box {
@@ -148,11 +140,11 @@ header {
   left: 11%;
   top: 322px; /* Justera efter behov */
   width: 30%; /* Justerar bredden så den täcker vänstra halvan */
-  background-color: #F6E5C9; 
+  background-color: #f6e5c9;
   padding: 20px;
   border-radius: 8px;
-  color: #301F06;
-  font-family: 'Inter', sans-serif;
+  color: #301f06;
+  font-family: "Inter", sans-serif;
   font-size: 0.9rem;
   text-align: center;
 }
@@ -160,22 +152,22 @@ header {
   position: absolute;
   left: 13%; /* Samma som .info-box */
   top: 640px;
-  
+
   width: 400px;
   max-width: 500px;
   height: 350px;
 }
 
 .contact-text {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   flex: 1;
   font-size: 1.5rem; /* Större text */
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 1.6;
 }
 
 .contact-form {
-  background-color: #3C4D0C;
+  background-color: #3c4d0c;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 50px;
@@ -197,7 +189,7 @@ header {
 
 /* Formulärelement */
 .form-group {
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
 }
@@ -222,7 +214,7 @@ textarea {
 
 /* Knapp-styling */
 button[type="submit"] {
-  background-color: #FFC13B;
+  background-color: #ffc13b;
   color: #301f06;
   padding: 10px 90px;
   border: none;
@@ -246,10 +238,8 @@ footer {
   display: flex;
   flex-wrap: wrap;
   padding: 100px;
-  background-color: #3C4D0C;
+  background-color: #3c4d0c;
   color: #fff;
-  
-  
 }
 .footer-left {
   position: relative;
@@ -285,24 +275,45 @@ footer a:hover {
 }
 @media (max-width: 768px) {
   .navbar {
-    text-align:center;
+    text-align: center;
     position: relative;
     top: 80px;
     left: 0;
   }
-  .navbar a{
+  .navbar a {
     font-size: 30px;
   }
-  
-  .contact-container {
-    padding: 20px;
+  /* Startsida */
+  .main-container {
+    flex-direction: column;
+    font-size: 48px;
+    min-height: auto;
   }
-  .logo{
+
+  .hero1 {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .matbild1-image {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .kontakt-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  } 
+    
+  .logo {
     width: 220px; /* Justera storleken på loggan */
     height: auto; /* Behåll bildens proportioner */
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* Flyttar den 50% av sin egen bredd åt vänster */
+  }
+  .contact-container {
+    padding: 20px;
   }
   .contact-form {
     margin-top: 1px;
@@ -332,13 +343,13 @@ footer a:hover {
     display: flex;
     position: relative;
     left: 223px;
-    margin-top: 20px;  /* Justera om du behöver lite mellanrum ovanför knappen */
+    margin-top: 20px; /* Justera om du behöver lite mellanrum ovanför knappen */
     padding-left: 10px; /* Lägg till lite padding om det behövs */
   }
-  
+
   /* Knappens styling */
   button[type="submit"] {
-    background-color: #FFC13B;
+    background-color: #ffc13b;
     color: #301f06;
     padding: 10px 90px;
     border: none;
@@ -346,7 +357,23 @@ footer a:hover {
     font-size: 1rem;
     cursor: pointer;
     margin-top: 10px;
-    
   }
 }
+@media (max-width: 480px) {
+  .main-container {
+    font-size: 32px;
+  }
 
+  .hero1 {
+    font-size: 24px;
+  }
+
+  .matbild1-image {
+    max-width: 300px;
+  }
+
+  .kontakt-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
