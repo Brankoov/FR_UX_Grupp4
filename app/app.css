@@ -2,17 +2,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  
 }
 html,
 body {
   background-color: #fffbf5;
   height: 100%;
-
   line-height: 1.6;
-
-  display: flex;
-  flex-direction: column;
 }
 
 .main-container {
@@ -65,19 +61,18 @@ body {
 
 /* Loggan */
 .logo {
-  position: absolute; /* Gör att loggan kan positioneras fritt */
-  left: 20px; /* Lägg loggan lite från vänster */
-  top: 20px; /* Lägg loggan lite från toppen */
-  width: 300px; /* Justera storleken på loggan */
-  height: auto; /* Behåll bildens proportioner */
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 300px;
+  height: auto;
 }
 .navbar a {
-  margin-right: 30px; /* Justera avståndet mellan länkarna i navbar */
+  margin-right: 50px;
 }
 
 .navbar {
   background-color: transparent;
-
   position: relative;
   top: 0;
   left: 0;
@@ -89,12 +84,10 @@ body {
 .navbar a {
   display: inline-block;
   padding: 10px 20px;
-  margin: 0px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.2); /* Lätt transparent vit */
+  background-color: rgba(255, 255, 255, 0.2);
   color: rgb(5, 98, 31);
   text-decoration: none;
-
   transition: background-color 0.3s ease, transform 0.2s ease;
   font-family: "Katibeh";
   font-size: 60px;
@@ -111,96 +104,105 @@ body {
   flex-direction: column;
 }
 
-/* Styling för hela sidan */
-
 header {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* Layout för kontaktformulär */
+/* Kontaktformulär */
 .contact-container {
   display: flex;
-  justify-content: center; /* Centrerar hela sektionen */
-  
-
+  justify-content: center;
   margin: 50px auto;
-  max-width: 1400px; /* Maximal bredd på sidan */
+  max-width: 90%;
 }
-.form-title {
-  display:flex;
-  font-family: "Katibeh";
-  position: relative;
-  margin-left: 566px;
-  font-size: 59px;
-  color: #ffffff;
-  margin-bottom: 10px;
+.form-title{
+  font-family: 'Katibeh', sans-serif;  
+  color: white;  
+  font-size: 60px;
 }
-.info-box {
+
+.contact-form {
   display: flex;
-  position: relative;
+  flex-direction: row;
   
+  background-color: #3c4d0c;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   
+  padding: 50px;
+  width: 100%;
+  margin-bottom: 120px;
+  padding-bottom: auto;
+}
+/*Höger sektion*/
+.form-container {
+  flex: 1; /* Tar upp resterande utrymme */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Vänstra sektionen */
+.form-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1; /* Gör att vänstra sektionen tar upp ett flexibelt utrymme */
+  max-width: 45%; /* Se till att den inte blir för bred */
   
+}
+
+/* Infobox */
+.info-box {
+  flex: 0 1 30%; /* Max 45% av bredden */
+  width: 80%;
   background-color: #f6e5c9;
   padding: 20px;
   border-radius: 8px;
   color: #301f06;
   font-family: "Inter", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
+  margin-bottom: 40px;
+  margin-right: 20px;
 }
-.info-image {
-  position: absolute;
-  left: 13%; /* Samma som .info-box */
-  top: 640px;
 
-  width: 400px;
+/* Bild */
+.info-image {
+  width: 350px;
   max-width: 500px;
   height: 350px;
 }
 
-.contact-text {
-  font-family: "Inter", sans-serif;
-  flex: 1;
-  font-size: 1.5rem; /* Större text */
-  color: #ffffff;
-  line-height: 1.6;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  
-  background-color: #3c4d0c;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 50px;
-  width: 1300px; /* Gör formuläret bredare */
-  
-  margin-bottom: 120px;
-  padding-bottom: 65px;
-}
+/* Formulärens högra sektion */
 .form-grid {
+  
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Två kolumner */
-  gap: 25px;
-  width: 50%; /* Endast högra halvan av formuläret */
-  margin-left: auto; /* Flytta fälten till höger */
-  margin-right: 35px; /* Justera höger marginal för bättre placering */
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
 }
 
 /* Formulärelement */
 .form-group {
+  width: 100%;
   color: #ffffff;
   display: flex;
   flex-direction: column;
+  
+  
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
-  width: 100%; /* Låter fälten ta upp hela tilldelade bredden */
+  box-sizing: border-box;
+  width: 100%; /* Låt fältet fylla hela sin container */
+  max-width: 100%; /* Säkerställ att det inte blir för smalt */
+  
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -215,28 +217,27 @@ textarea {
   gap: 5px;
 }
 
-/* Knapp-styling */
+/* Skicka-knapp */
 button[type="submit"] {
   background-color: #ffc13b;
   color: #301f06;
   padding: 10px 90px;
   border: none;
-  position: relative;
-  right: 100%;
   border-radius: 4px;
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
   margin-top: 40px;
+  
 }
 
 button[type="submit"]:hover {
   background-color: #d99605;
 }
 
-/* Footer-styling */
+/* Footer */
 footer {
-  margin-top: auto; /* Trycker ner footern */
+  margin-top: auto;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -244,12 +245,11 @@ footer {
   background-color: #3c4d0c;
   color: #fff;
 }
+
 .footer-left {
   position: relative;
   bottom: 50px;
-  /* font-family: 'Katibeh'; */
   font-size: 30px;
-  
   text-align: left;
 }
 
@@ -258,16 +258,16 @@ footer {
   bottom: 55px;
   left: 25%;
   font-size: 20px;
-
 }
 
 .footer-center p {
-  margin: 10px 0; /* Mellanrum mellan raderna */
+  margin: 10px 0;
 }
 
 footer a:hover {
   text-decoration: underline;
 }
+
 .phone-link {
   color: white;
   text-decoration: none;
@@ -276,6 +276,8 @@ footer a:hover {
 .phone-link:hover {
   text-decoration: underline;
 }
+
+/* Responsiv design */
 @media (max-width: 768px) {
   .navbar {
     text-align: center;
@@ -286,7 +288,7 @@ footer a:hover {
   .navbar a {
     font-size: 30px;
   }
-  /* Startsida */
+
   .main-container {
     flex-direction: column;
     font-size: 48px;
@@ -306,71 +308,42 @@ footer a:hover {
   .kontakt-button {
     font-size: 16px;
     padding: 10px 20px;
-  } 
-    
+  }
+
   .logo {
-    width: 220px; /* Justera storleken på loggan */
-    height: auto; /* Behåll bildens proportioner */
+    width: 220px;
+    height: auto;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Flyttar den 50% av sin egen bredd åt vänster */
-  }
-  .contact-container {
-    padding: 20px;
-  }
-  .contact-form {
-    margin-top: 1px;
+    transform: translateX(-50%);
   }
 
-  /* Gör så att fälten är i en kolumn */
+  .contact-form {
+    flex-direction: column;
+    width: 100%;
+  }
+
   .form-grid {
     width: 100%;
-    grid-template-columns: 1fr; /* Fälten staplas på varandra */
-  }
-  .form-title {
-    position: relative;
-    right: 1%;
+    grid-template-columns: 1fr;
   }
 
-  /* Info-texten ska hamna längst ner */
   .info-box {
-    margin-top: 30px; /* Lite mellanrum från knappen */
+    margin-top: 30px;
     width: 100%;
-    text-align: center; /* Centrera texten om du vill */
-    position: relative; /* Se till att texten är i flödet */
-    top: 10px; /* Säkerställer att texten inte ligger för högt upp */
-    left: 0%;
+    text-align: center;
   }
+
   .info-image {
-    position: relative; /* Ta bort absolut positionering */
-    bottom: 0px; /* Återställ tidigare inställningar */
-    top: 20px;
-    left: 1px;
-    margin-top: 20px; /* Lägg till lite avstånd från infoboxen */
-    width: 100%; /* Anpassa bredden så den passar */
+    margin-top: 20px;
+    width: 100%;
     display: block;
   }
-
-  .button-container {
-    display: flex;
-    position: relative;
-    left: 223px;
-    margin-top: 20px; /* Justera om du behöver lite mellanrum ovanför knappen */
-    padding-left: 10px; /* Lägg till lite padding om det behövs */
-  }
-
-  /* Knappens styling */
-  button[type="submit"] {
-    background-color: #ffc13b;
-    color: #301f06;
-    padding: 10px 90px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 10px;
+  .form-title{
+    font-size: 40px;
   }
 }
+
 @media (max-width: 480px) {
   .main-container {
     font-size: 32px;

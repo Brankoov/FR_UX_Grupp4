@@ -131,112 +131,85 @@ export default function Kontakt() {
   };
 
   return (
-     
-    <div>     
-      <div>
-        <Header />
+    <div>
+      <Header />
+      <div className="contact-container">
+        <form className="contact-form" onSubmit={handleSubmit}>
+          {/* Vänster sektion */}
+          <div className="form-left">
+            <div className="info-box">
+              <p>Upptäck en värld av passion och tradition – två unika smakupplevelser!</p>
+              <p>Med en kärlek till både det genuina italienska köket och de djupa smakerna 
+                från Sveriges rika natur erbjuder jag två distinkta matkoncept – vid olika
+                 tillfällen, men alltid med samma passion.</p>
+              <p>Oavsett vilket koncept du möts av, kan du räkna med en måltid lagad med omsorg och hjärta.</p>
+            </div>
+            <img src="/images/formulärbild2.png" alt="Foodtruck" className="info-image" />
+          </div>
+
+          {/* Höger sektion */}
+          <div className="form-container">
+            <h1 className="form-title"><strong>Bokningsförfrågan</strong></h1>
+            <div className="form-grid">
+              <div className="form-group">
+                <label htmlFor="name">Namn*</label>
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="lastname">Efternamn*</label>
+                <input type="text" id="lastname" name="lastname" value={formData.lastname} onChange={handleChange} required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="Telnumber">Telefonnummer*</label>
+                <input type="text" id="Telnumber" name="Telnumber" value={formData.Telnumber} onChange={handleChange} required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">E-post*</label>
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+              </div>
+              <div className="form-group">
+                <label htmlFor="eventAdress">Adress</label>
+                <input type="text" id="eventAdress" name="eventAdress" value={formData.eventAdress} onChange={handleChange} />
+              </div>
+              <div className="form-group">
+                <label htmlFor="numberOfPeople">Hur många är ni (typ)?</label>
+                <input type="text" id="numberOfPeople" name="numberOfPeople" value={formData.numberOfPeople} onChange={handleChange} />
+              </div>
+              <div className="form-group">
+                <label htmlFor="eventDate">Vilket datum?*</label>
+                <input type="text" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
+              </div>
+              <div className="form-group">
+                <label>Eventtjänster</label>
+                <div className="checkbox-group">
+                  <label><input type="checkbox" name="eventServices" value="Foodtruck Catering" checked={formData.eventServices.includes("Foodtruck Catering")} onChange={handleCheckboxChange} /> Foodtruck</label>
+                  <label><input type="checkbox" name="eventServices" value="Catering" checked={formData.eventServices.includes("Catering")} onChange={handleCheckboxChange} /> Catering</label>
+                </div>
+              </div>
+              <div className="form-group">
+                <label>Vilken tid ska vi komma?</label>
+                <div className="checkbox-group">
+                  <label><input type="checkbox" name="arrivalTime" value="Lunch" checked={formData.arrivalTime.includes("Lunch")} onChange={handleCheckboxChange} /> Lunch</label>
+                  <label><input type="checkbox" name="arrivalTime" value="17.00" checked={formData.arrivalTime.includes("17.00")} onChange={handleCheckboxChange} /> 17.00</label>
+                  <label><input type="checkbox" name="arrivalTime" value="19.00" checked={formData.arrivalTime.includes("19.00")} onChange={handleCheckboxChange} /> 19.00</label>
+                  <label><input type="checkbox" name="arrivalTime" value="Senare" checked={formData.arrivalTime.includes("Senare")} onChange={handleCheckboxChange} /> Senare</label>
+                </div>
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Kommentar/Övriga önskemål</label>
+                <textarea id="message" name="message" value={formData.message} placeholder="Har du allergen/allergener eller specifika önskemål angående bokningen eller maten fyll i det här!" onChange={handleChange} rows={5}></textarea>
+              </div>
+            </div>
+            {/* Knapp-container */}
+            <div className="button-container">
+              <button type="submit">Skicka</button>
+            </div>
+          </div>
+        </form>
       </div>
-
-      <div className="contact-container">      
-
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <h1 className="form-title"><strong>Bokningsförfrågan</strong></h1>
-        
-        
-        <div className="form-grid">
-        <div className="form-group">
-          <label htmlFor="name">Namn*</label>
-          <input type="text" id="name" name="name" placeholder="Förnamn.." value={formData.name} onChange={handleChange} required />
-          {errors.name && <p className="error">{errors.name}</p>}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="lastname">Efternamn*</label>
-          <input type="text" id="lastname" name="lastname" placeholder="Efternamn.." value={formData.lastname} onChange={handleChange} required />
-          {errors.lastname && <p className="error">{errors.lastname}</p>}
-        </div>        
-
-        <div className="form-group">
-          <label htmlFor="Telnumber">Telefonnummer*</label>
-          <input type="text" id="Telnumber" name="Telnumber" value={formData.Telnumber} onChange={handleChange} required />
-          {errors.Telnumber && <p className="error">{errors.Telnumber}</p>}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="email">E-post*</label>
-          <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-          {errors.email && <p className="error">{errors.email}</p>}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="eventAdress">Adress</label>
-          <input type="text" id="eventAdress" name="eventAdress" value={formData.eventAdress} onChange={handleChange} />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="numberOfPeople">Hur många är ni (typ)?</label>
-          <input type="text" id="numberOfPeople" name="numberOfPeople" value={formData.numberOfPeople} onChange={handleChange} />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="eventDate">Vilket datum?*</label>
-          <input type="text" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} />
-          {errors.eventDate && <p className="error">{errors.eventDate}</p>}
-        </div>
-
-        <div className="form-group">
-          <label>Eventtjänster</label>
-          <div className="checkbox-group">
-            <label><input type="checkbox" name="eventServices" value="Foodtruck Catering" checked={formData.eventServices.includes("Foodtruck Catering")} onChange={handleCheckboxChange} /> Foodtruck</label>
-            <label><input type="checkbox" name="eventServices" value="Catering" checked={formData.eventServices.includes("Catering")} onChange={handleCheckboxChange} /> Catering</label>
-          </div>
-        </div>
-
-        <div className="form-group">
-          <label>Vilken tid ska vi komma?</label>
-          <div className="checkbox-group">
-            <label><input type="checkbox" name="arrivalTime" value="Lunch" checked={formData.arrivalTime.includes("Lunch")} onChange={handleCheckboxChange} /> Lunch</label>
-            <label><input type="checkbox" name="arrivalTime" value="17.00" checked={formData.arrivalTime.includes("17.00")} onChange={handleCheckboxChange} /> 17.00</label>
-            <label><input type="checkbox" name="arrivalTime" value="19.00" checked={formData.arrivalTime.includes("19.00")} onChange={handleCheckboxChange} /> 19.00</label>
-            <label><input type="checkbox" name="arrivalTime" value="Senare" checked={formData.arrivalTime.includes("Senare")} onChange={handleCheckboxChange} /> Senare</label>
-          </div>
-        </div>
-
-        
-
-        <div className="form-group">
-          <label htmlFor="message">Kommentar/Övriga önskemål</label>
-          <textarea id="message" name="message" placeholder="Har du allergen/allergener eller specifikt önskemål angående bokningen eller maten fyll i det här!" value={formData.message} onChange={handleChange} rows={5}></textarea>
-         </div>
-        </div>
-        <div className="button-container">
-    <button type="submit">Skicka</button>
-  </div>
-
-        <div className="info-box">
-          <p>
-            Upptäck en värld av passion och tradition – två unika smakupplevelser!
-            </p><br></br>
-            <p>
-             Med en kärlek till både det genuina italienska köket och de djupa smakerna 
-             från Sveriges rika natur erbjuder jag två distinkta matkoncept – vid olika tillfällen,
-             men alltid med samma passion.
-             </p><br></br>
-             <p>
-             Oavsett vilket koncept du möts av, kan du räkna med en måltid 
-             lagad med omsorg och hjärta. Välkommen att uppleva där tradition och passion möts.
-             Vi ses vid food trucken!
-          </p>
-          
-        </div>
-        <img src="/images/formulärbild2.png" alt="Foodtruck" className="info-image" />
-      </form>
-    </div>
-    
-  
-
       <Footer />
-    </div>
+    </div>   
+    
   );
 }
 
