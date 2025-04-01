@@ -119,6 +119,8 @@ header {
   max-width: 90%;
 }
 .form-title{
+  grid-column-start: 1;
+  grid-column-end: 2;
   order: 0;
   display: flex;
   font-family: 'Katibeh', sans-serif;  
@@ -186,6 +188,7 @@ header {
   
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
   gap: 30px;
      
   max-width: 100%;

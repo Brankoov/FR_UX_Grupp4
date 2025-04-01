@@ -138,9 +138,10 @@ export default function Kontakt() {
           
           {/* Höger sektion */}
           <div className="form-container">
-            <h1 className="form-title"><strong>Bokningsförfrågan</strong></h1>
+            
             <div className="form-grid">
-
+              <h1 className="form-title"><strong>Bokningsförfrågan</strong></h1>
+              <h1><strong></strong></h1>
               <div className="form-group">
                 <label htmlFor="name">Namn*</label>
                 <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
@@ -190,11 +191,12 @@ export default function Kontakt() {
                 <label htmlFor="message">Kommentar/Övriga önskemål</label>
                 <textarea id="message" name="message" value={formData.message} placeholder="Har du allergen/allergener eller specifika önskemål angående bokningen eller maten fyll i det här!" onChange={handleChange} rows={5}></textarea>
               </div>
-            </div>
-            {/* Knapp-container */}
+              {/* Knapp-container */}
             <div className="button-container">
               <button type="submit">Skicka</button>
             </div>
+            </div>
+            
               {/* Vänster sektion */}
             <div className="form-left">
               <div className="info-box">
