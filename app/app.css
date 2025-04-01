@@ -42,7 +42,7 @@ body {
   color: white;
   font-size: 20px;
   font-weight: bold;
-  padding: 15px 30px;
+  padding: 15px 30px; 
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -61,28 +61,30 @@ body {
 
 /* Loggan */
 .logo {
-  position: absolute;
+  position: absolute; 
   left: 20px;
   top: 20px;
   width: 300px;
   height: auto;
+  
 }
 .navbar a {
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 
 .navbar {
-  background-color: transparent;
+  
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 0;
-  padding: 30px 0;
+  padding: 40px 0;
   text-align: end;
 }
 .navbar a {
   display: inline-block;
+  margin-right: 15px;
   padding: 10px 20px;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.2);
@@ -113,16 +115,19 @@ header {
 .contact-container {
   display: flex;
   justify-content: center;
-  margin: 50px auto;
+  margin: 0px auto;
   max-width: 90%;
 }
 .form-title{
+  order: 0;
+  display: flex;
   font-family: 'Katibeh', sans-serif;  
   color: white;  
   font-size: 60px;
 }
 
 .contact-form {
+  
   display: flex;
   flex-direction: row;
   
@@ -137,24 +142,26 @@ header {
 }
 /*Höger sektion*/
 .form-container {
-  flex: 1; /* Tar upp resterande utrymme */
   display: flex;
-  flex-direction: column;
+  align-items: first baseline;
+  
+  
 }
 
 /* Vänstra sektionen */
 .form-left {
+  order: -1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 1; /* Gör att vänstra sektionen tar upp ett flexibelt utrymme */
+  
   max-width: 45%; /* Se till att den inte blir för bred */
   
 }
 
 /* Infobox */
 .info-box {
-  flex: 0 1 30%; /* Max 45% av bredden */
+  
   width: 80%;
   background-color: #f6e5c9;
   padding: 20px;
@@ -180,14 +187,13 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+     
   max-width: 100%;
 }
 
 /* Formulärelement */
 .form-group {
+
   width: 100%;
   color: #ffffff;
   display: flex;
@@ -200,25 +206,26 @@ input[type="text"],
 input[type="email"],
 textarea {
   box-sizing: border-box;
-  width: 100%; /* Låt fältet fylla hela sin container */
-  max-width: 100%; /* Säkerställ att det inte blir för smalt */
+  
   
   padding: 12px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  resize: vertical;
+  
 }
 
 /* Checkboxar */
 .checkbox-group {
-  width: 70%;
+  
   display: flex;
+  
   flex-direction: column;
   gap: 5px;
 }
 
 /* Skicka-knapp */
 button[type="submit"] {
+  display: flex;
   background-color: #ffc13b;
   color: #301f06;
   padding: 10px 90px;
@@ -236,55 +243,41 @@ button[type="submit"]:hover {
 }
 
 /* Footer */
-footer {
-  margin-top: auto;
-  width: 100%;
+Footer {
   display: flex;
-  flex-wrap: wrap;
-  padding: 100px;
   background-color: #3c4d0c;
-  color: #fff;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5rem;
 }
-
-.footer-left {
-  position: relative;
-  bottom: 50px;
-  font-size: 30px;
+.footer-left{
+  font-size: 2rem;
+  display: flex;
   text-align: left;
 }
-
-.footer-center {
-  position: relative;
-  bottom: 55px;
-  left: 25%;
-  font-size: 20px;
+.footer-center{
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  
+  
 }
+.footer-empty{
+  
+  width: 100px;
+  height: 100px;
 
-.footer-center p {
-  margin: 10px 0;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.phone-link {
-  color: white;
-  text-decoration: none;
-}
-
-.phone-link:hover {
-  text-decoration: underline;
 }
 
 /* Responsiv design */
 @media (max-width: 768px) {
   .navbar {
     display: flex;
-    justify-content:flex-start;
-    padding: 50px;
     
-    top: 80px;
+    
+    
+    top: 4.5rem;
     left: 0;
   }
   .navbar a {
@@ -316,45 +309,127 @@ footer a:hover {
     display: flex;
     width: 240px;
     height: auto;
-    margin-left: 120px;
+       
     
-    transform: translateX(-50%);
   }
   /*Kontaktformuläret*/
   .contact-container{
     display: flex;
+    background-color:pink;
     flex-direction: column;
+    width: 100vw;
+    min-width: 40rem;
+    padding: 0;
+    margin: 0;
+  }
+  .form-title{
+    text-align: center;
+    order: -1;
+    font-size: 40px;
   }
 
   .contact-form {
-    align-items: center;
+    max-width: none;
+    
     display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      
     
-    width: 100%;
-    padding: 100px;
-    
-    
-  }
-  .info-box{ 
-    align-items: center;
-    order: 2;
-  }
-  .info-image {
-    order: 3;
-  }
-  button[type="submit"] {
-    order: 5;
   }
   .form-grid {
+    justify-content: center;
     display: flex;
-    
+    width: 100%;
     flex-direction: column;
     
   }
-  .form-title{
-    font-size: 40px;
+  .form-left{
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+  }
+  .form-container{
+    order: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+  }
+  .info-box{ 
+    justify-content: center;
+    
+    order: 3;
+  }
+  .info-image {
+    justify-content: center;
+    
+    order: 4;
+  }
+  .checkbox-group {
+    display: flex;
+    
+    align-items: flex-start;
+    gap: 10px;
+    
+  }
+  
+  .checkbox-group label {
+    display: inline-flex;
+    /*align-items: center; */
+    
+  }
+  
+  .checkbox-title{
+    text-align:left;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+  }
+  button[type="submit"] {
+    order: 2;
+    margin-bottom: 40px;
+    justify-content: center;
+  }
+  
+  footer {
+    margin-top:  50px;
+    flex-direction: column; /* Stapla sektionerna vertikalt i mobil */
+    padding: 0px 0px; /* Justera padding för bättre responsivitet */
+    max-width: none;
+    min-width: 40rem;
+  }
+
+  .footer-left,
+  .footer-center {
+    text-align: left; /* Justera till vänster för båda sektionerna */
+    width: 100%; /* Se till att de tar upp hela bredden */
+    margin: 5px 0; /* Lägg till lite mellanrum mellan sektionerna */
+  }
+
+  .footer-left {
+    font-size: 30px; /* Minska storleken för att passa mobilskärm bättre */
+  }
+
+  .footer-center {
+    font-size: 20px; /* Minska storleken för bättre mobilupplevelse */
+  }
+
+  .footer-center p {
+    margin: 1px 0px; /* Minska mellanrummet mellan p-taggar */
   }
 }
+  
+
 
 @media (max-width: 480px) {
   .main-container {

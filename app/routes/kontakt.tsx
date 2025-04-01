@@ -135,22 +135,12 @@ export default function Kontakt() {
       <Header />
       <div className="contact-container">
         <form className="contact-form" onSubmit={handleSubmit}>
-          {/* Vänster sektion */}
-          <div className="form-left">
-            <div className="info-box">
-              <p>Upptäck en värld av passion och tradition – två unika smakupplevelser!</p>
-              <p>Med en kärlek till både det genuina italienska köket och de djupa smakerna 
-                från Sveriges rika natur erbjuder jag två distinkta matkoncept – vid olika
-                 tillfällen, men alltid med samma passion.</p>
-              <p>Oavsett vilket koncept du möts av, kan du räkna med en måltid lagad med omsorg och hjärta.</p>
-            </div>
-            <img src="/images/formulärbild2.png" alt="Foodtruck" className="info-image" />
-          </div>
-
+          
           {/* Höger sektion */}
           <div className="form-container">
             <h1 className="form-title"><strong>Bokningsförfrågan</strong></h1>
             <div className="form-grid">
+
               <div className="form-group">
                 <label htmlFor="name">Namn*</label>
                 <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
@@ -180,14 +170,15 @@ export default function Kontakt() {
                 <input type="text" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
               </div>
               <div className="form-group">
-                <label>Eventtjänster</label>
+                <label className="checkbox-title">Eventtjänster</label>
                 <div className="checkbox-group">
                   <label><input type="checkbox" name="eventServices" value="Foodtruck Catering" checked={formData.eventServices.includes("Foodtruck Catering")} onChange={handleCheckboxChange} /> Foodtruck</label>
                   <label><input type="checkbox" name="eventServices" value="Catering" checked={formData.eventServices.includes("Catering")} onChange={handleCheckboxChange} /> Catering</label>
                 </div>
               </div>
               <div className="form-group">
-                <label>Vilken tid ska vi komma?</label>
+                <label className="checkbox-title">Vilken tid ska vi komma?</label> 
+                {/*  */}
                 <div className="checkbox-group">
                   <label><input type="checkbox" name="arrivalTime" value="Lunch" checked={formData.arrivalTime.includes("Lunch")} onChange={handleCheckboxChange} /> Lunch</label>
                   <label><input type="checkbox" name="arrivalTime" value="17.00" checked={formData.arrivalTime.includes("17.00")} onChange={handleCheckboxChange} /> 17.00</label>
@@ -203,6 +194,17 @@ export default function Kontakt() {
             {/* Knapp-container */}
             <div className="button-container">
               <button type="submit">Skicka</button>
+            </div>
+              {/* Vänster sektion */}
+            <div className="form-left">
+              <div className="info-box">
+                <p>Upptäck en värld av passion och tradition – två unika smakupplevelser!</p>
+                <p>Med en kärlek till både det genuina italienska köket och de djupa smakerna 
+                  från Sveriges rika natur erbjuder jag två distinkta matkoncept – vid olika
+                  tillfällen, men alltid med samma passion.</p>
+                <p>Oavsett vilket koncept du möts av, kan du räkna med en måltid lagad med omsorg och hjärta.</p>
+              </div>
+              <img src="/images/formulärbild2.png" alt="Foodtruck" className="info-image" />
             </div>
           </div>
         </form>

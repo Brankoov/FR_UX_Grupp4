@@ -7,6 +7,9 @@ const Footer = () => {
             <p>Mail: sandra@230volt.se</p>
             <p><a href="tel:0707452853" className="phone-link">Telefon: 070-745 28 53</a></p>
           </div>
+          <div className="footer-empty">
+
+          </div>
       </footer>
     );
   }
