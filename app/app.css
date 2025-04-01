@@ -79,13 +79,13 @@ body {
   left: 0;
   width: 100%;
   z-index: 0;
-  padding: 40px 0;
+  padding: 40px 0px;
   text-align: end;
 }
 .navbar a {
   display: inline-block;
-  margin-right: 15px;
-  padding: 10px 20px;
+  margin-right: 20px;
+  padding: 10px;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.2);
   color: rgb(5, 98, 31);
@@ -107,7 +107,7 @@ body {
 }
 
 header {
-  text-align: center;
+  
   margin-bottom: 30px;
 }
 
@@ -281,7 +281,7 @@ Footer {
     
     
     top: 4.5rem;
-    left: 0;
+    
   }
   .navbar a {
     font-size: 40px;
@@ -326,7 +326,8 @@ Footer {
     margin: 0;
   }
   .form-title{
-    text-align: center;
+    justify-content: center;
+    
     order: -1;
     font-size: 40px;
   }
@@ -346,6 +347,7 @@ Footer {
   }
   .form-grid {
     justify-content: center;
+    align-items: center;
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -360,6 +362,7 @@ Footer {
   }
   .form-container{
     order: 1;
+    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -367,8 +370,7 @@ Footer {
     width: 100%;
   }
   .info-box{ 
-    justify-content: center;
-    
+    justify-content: center;    
     order: 3;
   }
   .info-image {
