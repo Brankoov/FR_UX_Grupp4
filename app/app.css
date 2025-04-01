@@ -320,8 +320,8 @@ Footer {
     display: flex;
     background-color:pink;
     flex-direction: column;
-    width: 100vw;
-    min-width: 40rem;
+    
+    
     padding: 0;
     margin: 0;
   }
@@ -408,8 +408,8 @@ Footer {
     margin-top:  50px;
     flex-direction: column; /* Stapla sektionerna vertikalt i mobil */
     padding: 0px 0px; /* Justera padding för bättre responsivitet */
-    max-width: none;
-    min-width: 40rem;
+    
+    
   }
 
   .footer-left,
