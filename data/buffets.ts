@@ -3,12 +3,12 @@
 // Varje objekt har ett id, namn, pris, beskrivning, kategori och bild.
 // Denna data används för att skapa produkterna på sidan.
 //added by Majid
- 
+
 import type { Buffet } from "types/buffet";
- 
+
 export const mat : Buffet[] = [
     {
-      id: 4,
+      id: 1,
       name: "Italiensk buffé",
       price: 280,
       image: "images/img_italian-buffet.jpg",
@@ -20,7 +20,7 @@ export const mat : Buffet[] = [
       ],
     },
     {
-      id: 5,
+      id: 2,
       name: "Grekisk buffé",
       price: 280,
       image: "images/img_greek_buffet.jpg",
@@ -32,7 +32,7 @@ export const mat : Buffet[] = [
       ],
     },
     {
-      id: 6,
+      id: 3,
       name: "Asiatisk buffé",
       price: 280,
       image: "images/img_asian_buffet.jpg",
@@ -44,4 +44,3 @@ export const mat : Buffet[] = [
       ],
     },
   ];
- 

@@ -8,3 +8,4 @@ export type Buffet = {
       items: string[];
     }[];
   };
+

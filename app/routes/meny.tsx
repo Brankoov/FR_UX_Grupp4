@@ -1,42 +1,42 @@
 import React, { useState, useEffect } from 'react';
 import type { Menu } from "types/menu.ts";
 import type { Buffet } from "types/buffet.ts";
-import { foods} from "data/menues";
+import { foods} from "data/menues"; 
 import { mat } from "data/buffets";
- 
- 
-import Header from "src/components/Header";
-import Footer from "src/components/Footer";
+
+
+import Header from "src/components/Header"; 
+import Footer from "src/components/Footer"; 
 const MenuSection: React.FC = () => {
   const [menuList, setMenuList] = useState<Menu[]>([]);
   const [buffetList, setBuffetList] = useState<Buffet[]>([]);
- 
+
   useEffect(() => {
     setMenuList(foods); //  // Sätter menyn (foods) när komponenten laddas
   }, []);
- 
+  
   useEffect(() => {
     setBuffetList(mat); // sätter buffén (buffets) när komponenten laddas
   }, []);
- 
- 
+
+  
   console.log(mat);
- 
- 
+  
+
   if (menuList.length === 0 || buffetList.length === 0) {
     return <p>Laddar meny och bufféer...</p>;
   }
- 
+
   return (
     <div>
       <Header />
- 
+
       {/* Hero Image */}
       <div style={{ textAlign: "center" }}>
-        <img
-          src="images/img_menu_cover.jpeg"
-          alt="Catering meny"
-          style={{ width: "100%", maxHeight: "500px", objectFit: "cover" }}
+        <img 
+          src="images/img_menu_cover.jpeg" 
+          alt="Catering meny" 
+          style={{ width: "100%", maxHeight: "500px", objectFit: "cover" }} 
         />
       </div>
        {/* Catering Meny Sektion */}
@@ -44,9 +44,9 @@ const MenuSection: React.FC = () => {
         <h1>Catering meny</h1>
         <p>Våra bufféer går att anpassa efter era preferenser, skicka en förfrågan!</p>
       </section>
- 
- 
- 
+
+
+
  {/* Buffé Sektion */}
  <section className="buffet-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", textAlign: "center" }}>
         {buffetList.map((buffet) => (
@@ -67,16 +67,16 @@ const MenuSection: React.FC = () => {
           </div>
         ))}
       </section>
- 
- 
+
+
       {/* Foodtruck Meny Sektion */}
       <section style={{ textAlign: "center", margin: "40px 0" }}>
         <h1>Foodtruck meny</h1>
         <p>Ta en titt på vårat exklusiva utbud och få den perfekta lunchupplevelse</p>
       </section>
- 
- 
- 
+
+
+
       <section className="menu-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
         {menuList.map((item) => (
           <div key={item.id} style={{ border: "1px solid #ddd", padding: "10px", borderRadius: "5px", textAlign: "center" }}>
@@ -87,10 +87,10 @@ const MenuSection: React.FC = () => {
           </div>
         ))}
       </section>
- 
+
       <Footer />
     </div>  
   );
 };
- 
+
 export default MenuSection;
