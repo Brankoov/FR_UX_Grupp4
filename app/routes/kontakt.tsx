@@ -35,31 +35,33 @@ export default function Kontakt() {
   const [errors, setErrors] = useState<any>({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value, type } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "date" ? value : value, // Hanterar datum korrekt
+    }));
   };
 
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, checked } = e.target;
   
-    // Kontrollera om formData[name] är en array innan vi använder filter
     setFormData((prevState) => {
       if (name === "arrivalTime" || name === "eventServices") {
         const currentValues = prevState[name as keyof typeof prevState];
   
         if (Array.isArray(currentValues)) {
-          // Om det är en array, lägg till eller ta bort värdet
           return {
             ...prevState,
             [name]: checked
-              ? [...currentValues, value] // Lägg till om den är ikryssad
-              : currentValues.filter((item) => item !== value), // Ta bort om den inte är ikryssad
+              ? [...currentValues, value]
+              : currentValues.filter((item) => item !== value),
           };
         }
         
-        // Om det inte är en array, skapa en ny array
         return {
           ...prevState,
-          [name]: checked ? [value] : [], // Om ikryssad, skapa en array med värdet, annars tom
+          [name]: checked ? [value] : [],
         };
       }
   
@@ -70,40 +72,34 @@ export default function Kontakt() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted!");
-    console.log("Formdata:", formData)
+    console.log("Formdata:", formData);
 
-     // Skapa ett objekt för att hålla valideringsfel
-  const validationErrors: any = {};
+    const validationErrors: any = {};
 
-   // E-post validering
-   if (!formData.email.includes('@')) {
-    validationErrors.email = 'E-post måste innehålla ett @';
-  }
+    if (!formData.email.includes('@')) {
+      validationErrors.email = 'E-post måste innehålla ett @';
+    }
 
-  // Telefonnummer validering (bara siffror och rätt längd)
-  if (!/^\d{10}$/.test(formData.Telnumber)) {
-    validationErrors.Telnumber = 'Telefonnummer måste vara 10 siffror';
-    alert("Telefonnummer måster vara 10 siffror")
-  }
+    if (!/^\d{10}$/.test(formData.Telnumber)) {
+      validationErrors.Telnumber = 'Telefonnummer måste vara 10 siffror';
+      alert("Telefonnummer måster vara 10 siffror")
+    }
 
-  // Datumvalidering (dd/mm/åå) (dd/mm/åååå)
-  if (!/^\d{2}\/\d{2}\/\d{2,4}$/.test(formData.eventDate)) {
-    validationErrors.eventDate = 'Datumet måste vara i formatet dd/mm/åå eller dd/mm/åååå';
-    alert("Datumet måste vara i formatet dd/mm/åå eller dd/mm/åååå")
-  }
+    {/*if (!/^\d{2}\/\d{2}\/\d{2,4}$/.test(formData.eventDate)) {
+      validationErrors.eventDate = 'Datumet måste vara i formatet dd/mm/åå eller dd/mm/åååå';
+      alert("Datumet måste vara i formatet dd/mm/åå eller dd/mm/åååå")
+    } */}
 
-  // Om det finns några fel, visa felmeddelanden och avbryt formulärskickningen
-  if (Object.keys(validationErrors).length > 0) {
-    console.log("Validation errors:", validationErrors);
-    setErrors(validationErrors);  
-    return;
-  }
+    if (Object.keys(validationErrors).length > 0) {
+      console.log("Validation errors:", validationErrors);
+      setErrors(validationErrors);  
+      return;
+    }
 
-    // Skicka data till EmailJS
     emailjs
       .send(
-        "service_o4bfd5q", // Din tjänst-ID
-        "template_gl302kp", // Din mall-ID
+        "service_o4bfd5q",
+        "template_gl302kp",
         {
           name: formData.name,
           lastname: formData.lastname,
@@ -116,19 +112,20 @@ export default function Kontakt() {
           eventServices: formData.eventServices.join(", "),
           arrivalTime: formData.arrivalTime.join(", "), 
         },
-        "hCsWUw6D_HV6MX5JI" // Din användar-ID
+        "hCsWUw6D_HV6MX5JI"
       )
       .then(
         (result) => {
-          console.log("Email sent successfully:", result); // Logga resultatet om mailet skickades
+          console.log("Email sent successfully:", result);
           alert("Formuläret skickades!");
         },
         (error) => {
-          console.log("Error sending email:", error); // Logga felmeddelandet här
+          console.log("Error sending email:", error);
           alert("Något gick fel. Försök igen senare.");
         }
       );
   };
+
 
   return (
     <div>
@@ -143,7 +140,7 @@ export default function Kontakt() {
               <h1 className="form-title"><strong>Bokningsförfrågan</strong></h1>
               <h1><strong></strong></h1>
               <div className="form-group">
-                <label htmlFor="name">Namn*</label>
+                <label htmlFor="name">Förnamn*</label>
                 <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
               </div>
               <div className="form-group">
@@ -159,7 +156,7 @@ export default function Kontakt() {
                 <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
               </div>
               <div className="form-group">
-                <label htmlFor="eventAdress">Adress</label>
+                <label htmlFor="eventAdress">Event adress</label>
                 <input type="text" id="eventAdress" name="eventAdress" value={formData.eventAdress} onChange={handleChange} />
               </div>
               <div className="form-group">
@@ -168,7 +165,7 @@ export default function Kontakt() {
               </div>
               <div className="form-group">
                 <label htmlFor="eventDate">Vilket datum?*</label>
-                <input type="text" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
+                <input type="date" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
               </div>
               <div className="form-group">
                 <label className="checkbox-title">Eventtjänster</label>
