@@ -34,6 +34,8 @@ export default function Kontakt() {
 
   const [errors, setErrors] = useState<any>({});
 
+  const [gdprAccepted, setGdprAccepted] = useState<boolean>(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
 
@@ -74,7 +76,7 @@ export default function Kontakt() {
     console.log("Form submitted!");
     console.log("Formdata:", formData);
 
-    const validationErrors: any = {};
+    const validationErrors: { [key: string]: string } = {};
 
     if (!formData.email.includes('@')) {
       validationErrors.email = 'E-post måste innehålla ett @';
@@ -83,6 +85,11 @@ export default function Kontakt() {
     if (!/^\d{10}$/.test(formData.Telnumber)) {
       validationErrors.Telnumber = 'Telefonnummer måste vara 10 siffror';
       alert("Telefonnummer måster vara 10 siffror")
+    }
+
+    if (!gdprAccepted) {
+      alert("Du måste godkänna GDPR-villkoren för att skicka formuläret.");
+      return;
     }
 
     {/*if (!/^\d{2}\/\d{2}\/\d{2,4}$/.test(formData.eventDate)) {
@@ -187,6 +194,17 @@ export default function Kontakt() {
               <div className="form-group">
                 <label htmlFor="message">Kommentar/Övriga önskemål</label>
                 <textarea id="message" name="message" value={formData.message} placeholder="Har du allergen/allergener eller specifika önskemål angående bokningen eller maten fyll i det här!" onChange={handleChange} rows={5}></textarea>
+              </div>
+              {/*GDPR checkbox*/}
+              <div className="form-group gdpr-checkbox">
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={gdprAccepted}
+                    onChange={(e) => setGdprAccepted(e.target.checked)}
+                  />
+                  Jag godkänner <a href="https://www.imy.se/verksamhet/dataskydd/" target="_blank" rel="noopener noreferrer">villkoren enligt GDPR</a>.
+                </label>
               </div>
               {/* Knapp-container */}
             <div className="button-container">

@@ -228,7 +228,9 @@ textarea {
   flex-direction: column;
   gap: 5px;
 }
-
+a{
+  color: white;
+}
 /* Skicka-knapp */
 button[type="submit"] {
   display: flex;
