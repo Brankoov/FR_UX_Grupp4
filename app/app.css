@@ -13,6 +13,9 @@ body {
   height: 100%;
   line-height: 1.6;
 }
+.page-background{
+  background-color: #C7CCB7;
+}
 
 .main-container {
   text-align: center;
@@ -71,9 +74,7 @@ body {
   height: auto;
   
 }
-.navbar a {
-  /* margin-right: 50px; */
-}
+
 
 .navbar {
   
@@ -116,34 +117,21 @@ header {
 
 /* Kontaktformulär */
 .contact-container {
+  background-color: #C7CCB7;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  margin: 0px auto;
-  max-width: 90%;
+  padding: 60px 20px;
 }
-.form-title{
-  grid-column-start: 1;
-  grid-column-end: 2;
-  order: 0;
-  display: flex;
-  font-family: 'Katibeh', sans-serif;  
-  color: white;  
-  font-size: 60px;
-}
+
 
 .contact-form {
   
-  display: flex;
-  flex-direction: row;
-  
-  background-color: #3c4d0c;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-  padding: 50px;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
   width: 100%;
-  margin-bottom: 120px;
-  padding-bottom: auto;
+  flex-direction: column;
 }
 /*Höger sektion*/
 .form-container {
@@ -206,21 +194,23 @@ header {
   flex-direction: column;
   
   
+  
 }
 
 input[type="text"],
 input[type="email"],
-textarea {
-  box-sizing: border-box;
-  
-  
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  
+textarea,
+select {
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: white;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
 }
 
-/* Checkboxar */
+
+/* Checkboxar
 .checkbox-group {
   
   display: flex;
@@ -231,6 +221,7 @@ textarea {
 a{
   color: white;
 }
+ */  
 /* Skicka-knapp */
 button[type="submit"] {
   display: flex;
