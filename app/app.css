@@ -340,7 +340,7 @@ Footer {
   /*Kontaktformuläret*/
   .contact-container{
     display: flex;
-    background-color:pink;
+    
     flex-direction: column;
     
     

@@ -14,10 +14,11 @@ export default function Kontakt() {
     eventDate: string;
     numberOfPeople: string,
     eventAdress: string;
-    arrivalTime: string[];
+    //arrivalTime: string[];
     subject: string;
     message: string;
-    eventServices: string[]; // Här specificeras att det är en array av strängar
+    bookingType: string;
+    //eventServices: string[]; // Här specificeras att det är en array av strängar
   }>({
     name: "",
     lastname:"",
@@ -26,10 +27,11 @@ export default function Kontakt() {
     eventDate: "",
     numberOfPeople: "",
     eventAdress: "",
-    arrivalTime: [],
+    //arrivalTime: [],
     subject: "",
     message: "",
-    eventServices: [], // Tom array från början
+    bookingType: "",
+    //eventServices: [], // Tom array från början
   });
 
   const [errors, setErrors] = useState<any>({});
@@ -44,7 +46,7 @@ export default function Kontakt() {
       [name]: type === "date" ? value : value, // Hanterar datum korrekt
     }));
   };
-
+  {/* CHECKBOX HANTERING
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, checked } = e.target;
   
@@ -69,7 +71,7 @@ export default function Kontakt() {
   
       return prevState;
     });
-  };
+  }; */}
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -116,8 +118,9 @@ export default function Kontakt() {
           numberOfPeople: formData.numberOfPeople,
           eventAdress: formData.eventAdress,
           message: formData.message,
-          eventServices: formData.eventServices.join(", "),
-          arrivalTime: formData.arrivalTime.join(", "), 
+          bookingType: formData.bookingType,
+          //eventServices: formData.eventServices.join(", "),
+          //arrivalTime: formData.arrivalTime.join(", "), 
         },
         "hCsWUw6D_HV6MX5JI"
       )
@@ -147,6 +150,23 @@ export default function Kontakt() {
               <h1 className="form-title"><strong>Bokningsförfrågan</strong></h1>
               <h1><strong></strong></h1>
               <div className="form-group">
+                <label htmlFor="bookingType">Vad vill du boka?</label>
+                <select
+                  id="bookingType"
+                  name="bookingType"
+                  value={formData.bookingType}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">-- Välj ett alternativ --</option>
+                  <option value="Foodtruck">Foodtruck</option>
+                  <option value="Lunch">Lunch</option>
+                  <option value="Catering Italiensk Buffé">Catering Italiensk Buffé</option>
+                  <option value="Catering Grekisk Buffé">Catering Grekisk Buffé</option>
+                  <option value="Catering Asiatisk Buffé">Catering Asiatisk Buffé</option>
+                </select>
+              </div>
+              <div className="form-group">
                 <label htmlFor="name">Förnamn*</label>
                 <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
               </div>
@@ -174,6 +194,7 @@ export default function Kontakt() {
                 <label htmlFor="eventDate">Vilket datum?*</label>
                 <input type="date" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
               </div>
+              {/* CHECKBOXAR
               <div className="form-group">
                 <label className="checkbox-title">Eventtjänster</label>
                 <div className="checkbox-group">
@@ -181,16 +202,17 @@ export default function Kontakt() {
                   <label><input type="checkbox" name="eventServices" value="Catering" checked={formData.eventServices.includes("Catering")} onChange={handleCheckboxChange} /> Catering</label>
                 </div>
               </div>
+              
               <div className="form-group">
                 <label className="checkbox-title">Vilken tid ska vi komma?</label> 
-                {/*  */}
+                  
                 <div className="checkbox-group">
                   <label><input type="checkbox" name="arrivalTime" value="Lunch" checked={formData.arrivalTime.includes("Lunch")} onChange={handleCheckboxChange} /> Lunch</label>
                   <label><input type="checkbox" name="arrivalTime" value="17.00" checked={formData.arrivalTime.includes("17.00")} onChange={handleCheckboxChange} /> 17.00</label>
                   <label><input type="checkbox" name="arrivalTime" value="19.00" checked={formData.arrivalTime.includes("19.00")} onChange={handleCheckboxChange} /> 19.00</label>
                   <label><input type="checkbox" name="arrivalTime" value="Senare" checked={formData.arrivalTime.includes("Senare")} onChange={handleCheckboxChange} /> Senare</label>
                 </div>
-              </div>
+              </div>*/}
               <div className="form-group">
                 <label htmlFor="message">Kommentar/Övriga önskemål</label>
                 <textarea id="message" name="message" value={formData.message} placeholder="Har du allergen/allergener eller specifika önskemål angående bokningen eller maten fyll i det här!" onChange={handleChange} rows={5}></textarea>
