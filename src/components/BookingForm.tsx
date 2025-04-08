@@ -224,7 +224,7 @@ const BookingForm = () => {
           </div>
           
 
-          <div className={styles['form-group']}>
+          <div className={`${styles['form-group']} ${styles['form-group-full']}`}>
             <label>Kommentar</label>
             <textarea name="message" value={formData.message} onChange={handleChange} rows={5}></textarea>
           </div>
