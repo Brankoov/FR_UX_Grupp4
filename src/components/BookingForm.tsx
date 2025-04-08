@@ -144,8 +144,9 @@ const BookingForm = () => {
 
   return (
     <div className={styles['contact-wrapper']}>
+     <h2 className={styles['intro-titel']}>Bokningsförfrågan</h2>
       <div className={styles['form-section']}>
-        <h2 className={styles['intro-titel']}>Bokningsförfrågan</h2>
+        
          <div className={styles['intro-section']}>
           <div className={styles['intro-text']}>
             
