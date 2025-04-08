@@ -25,6 +25,8 @@ const BookingForm = () => {
 
   const [gdprError, setGdprError] = useState<boolean>(false);
 
+  const [showConfirmation, setShowConfirmation] = useState<boolean>(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
 
@@ -118,8 +120,11 @@ const BookingForm = () => {
       .then(
         (result: any) => {
           console.log("Email sent successfully:", result);
-          alert("Formuläret skickades!");
+          
+          setShowConfirmation(true); // Visa popup
+          setTimeout(() => setShowConfirmation(false), 5000); // Dölj efter 5 sekunder
         },
+        
         (error: any) => {
           console.log("Error sending email:", error);
           alert("Något gick fel. Försök igen senare.");
@@ -191,6 +196,8 @@ const BookingForm = () => {
                  <label htmlFor="eventDate">Vilket datum?*</label>
                  <input type="date" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
              </div>
+             <div className={`${styles['form-group']} ${styles['form-group-full']}`}></div>
+             <div className={`${styles['form-group']} ${styles['form-group-full']}`}></div>
           <div className={styles['form-group']}>
             <label>Förnamn*</label>
             <input type="text" name="name" value={formData.name} onChange={handleChange} required />
@@ -211,7 +218,7 @@ const BookingForm = () => {
 
           <div className={`${styles['form-group']} ${styles['form-group-full']}`}>
             <label>Kommentar</label>
-            <textarea name="message" value={formData.message} onChange={handleChange} rows={5}></textarea>
+            <textarea name="message" value={formData.message} placeholder="Skriv önskemål/eventuella allergener..." onChange={handleChange} rows={5}></textarea>
           </div>
 
           <div className={styles['checkbox-row']}>
@@ -228,6 +235,11 @@ const BookingForm = () => {
             </div>
             )}
         </form>
+         {showConfirmation && (
+        <div className={styles['confirmation-popup']}>
+          <p>Tack för din bokning!<br />Vi återkopplar till dig snarast.</p>
+        </div>
+        )}
       </div>
     </div>
   );
