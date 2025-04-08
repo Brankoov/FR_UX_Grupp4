@@ -257,15 +257,15 @@ Footer {
 
 }
 /*/////////////////////Meny Styling ////////////////////////////*/
-added by Majid
+/*added by by Majid for menu page*/
 /* Grundläggande styling */
 /* Grundläggande styling */
 .menu-container {
-  max-width: 1200px;
+  max-width: auto;
   margin: auto;
   padding: 20px;
   font-family: "katibeh", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
 }
  
 /* Hero image */
@@ -275,6 +275,9 @@ added by Majid
   object-fit: cover;
   max-height: 400px;
   border-radius: 10px;
+  margin-top: 2rem; /* Justera efter behov */
+  text-align: center;
+  border-radius: 12px;
 }
  
 /* Sektionstitlar */

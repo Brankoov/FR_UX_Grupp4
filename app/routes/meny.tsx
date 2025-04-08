@@ -3,12 +3,10 @@ import type { Menu } from "types/menu.ts";
 import type { Buffet } from "types/buffet.ts";
 import { foods} from "data/menues"; 
 import { mat } from "data/buffets";
-
-
 import Header from "src/components/Header"; 
 import Footer from "src/components/Footer"; 
-
 import "app/app.css"; // Importera CSS-modulen
+import { Link } from "react-router-dom"; // Importera Link från react-router-dom
 
 
 const MenuSection: React.FC = () => {
@@ -36,7 +34,7 @@ const MenuSection: React.FC = () => {
       {/* Hero Image */}
       <div className="hero-image">
         <img 
-          src="images/img_menu_cover.jpeg" 
+          src="images/img_menu_cover.jpg" 
           alt="Catering meny" 
         />
       </div>
@@ -45,11 +43,18 @@ const MenuSection: React.FC = () => {
       <section className="menu-intro">
         <h1>Catering meny</h1>
         <p>Våra bufféer går att anpassa efter era preferenser, skicka en förfrågan!</p>
+        <div className="cover-button-menu">
+           <Link to="/kontakt">
+             <button className="kontakt-button">bokningsförfrågan</button>
+           </Link>
+        </div>
+
       </section>
 
       {/* Buffé Sektion */}
       <section className="buffet-grid">
-        {buffetList.map((buffet) => (
+     
+            {buffetList.map((buffet) => (
           <div key={buffet.id} className="buffet-item">
             <img src={buffet.image} alt={`Bild på ${buffet.name}`} className="buffet-image" />
             <h2>{buffet.name}</h2>
@@ -71,7 +76,7 @@ const MenuSection: React.FC = () => {
       {/* Foodtruck Meny Sektion */}
       <section className="menu-intro">
         <h1>Foodtruck meny</h1>
-        <p>Ta en titt på vårat exklusiva utbud och få den perfekta lunchupplevelse</p>
+        <p>Ta en titt på vårt exklusiva utbud och få den perfekta lunchupplevelsen</p>
       </section>
 
       <section className="menu-grid">
