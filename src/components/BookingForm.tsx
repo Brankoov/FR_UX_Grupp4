@@ -1,37 +1,22 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-
+import { type bookingFormData } from "data/bookingFormData"
 import styles from "./BookingForm.module.css";
 
 const BookingForm = () => {
-    const [formData, setFormData] = useState<{
-        name: string;
-        lastname:string;
-        email: string;
-        Telnumber: string;
-        eventDate: string;
-        numberOfPeople: string,
-        eventAdress: string;
-        serveTime: string,
-        subject: string;
-        message: string;
-        bookingType: string;
-        cateringType: string,
-        //eventServices: string[]; // Här specificeras att det är en array av strängar
-    }>({
+    const [formData, setFormData] = useState<bookingFormData>({
         name: "",
-        lastname:"",
+        lastname: "",
         email: "",
         Telnumber: "",
         eventDate: "",
         numberOfPeople: "",
         eventAdress: "",
-        serveTime:"",
+        serveTime: "",
         subject: "",
         message: "",
         bookingType: "",
         cateringType: "",
-        //eventServices: [], // Tom array från början
     });
 
   const [errors, setErrors] = useState({});
