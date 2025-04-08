@@ -191,6 +191,9 @@ const BookingForm = () => {
                 <div className={styles['form-group']}>
                  <label htmlFor="serveTime">När ska maten serveras?</label>
                  <input type="text" id="serveTime" name="serveTime" value={formData.serveTime} onChange={handleChange} />
+                 <small className={styles['field-text']}>
+                    Vi är alltid på plats 30 min innan och sätter upp.
+                </small>
                 </div>
                 <div className={styles['form-group']}>
                  <label htmlFor="eventDate">Vilket datum?*</label>
@@ -228,10 +231,10 @@ const BookingForm = () => {
             </label>
           </div>
           
-          <button type="submit" disabled={!gdprAccepted}>Skicka</button>
+          <button type="submit">Skicka</button>
           {gdprError && (
-            <div className={styles['gdpr-tooltip']}>
-                Du måste godkänna integritetspolicyn
+            <div className={styles['gdpr-error']}>
+                Du måste godkänna integritetspolicyn för att kunna skicka formuläret.
             </div>
             )}
         </form>
