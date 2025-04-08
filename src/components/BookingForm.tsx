@@ -166,6 +166,7 @@ const BookingForm = () => {
         </div>
 
         <form className={styles['form-clean']} onSubmit={handleSubmit}>
+        <div className={styles['form-group-row']}>
         <div className={styles['form-group']}>
             <label>Vad vill du boka?</label>
             <select name="bookingType" value={formData.bookingType} onChange={handleChange}>
@@ -188,6 +189,7 @@ const BookingForm = () => {
               </select>
             </div>
           )}
+          </div>
              <div className={styles['form-group']}>
                  <label htmlFor="eventAdress">Eventadress</label>
                  <input type="text" id="eventAdress" name="eventAdress" value={formData.eventAdress} onChange={handleChange} />
