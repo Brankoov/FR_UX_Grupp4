@@ -10,9 +10,16 @@ body {
   height: 100%;
 
   line-height: 1.6;
+<<<<<<< HEAD
 
   display: flex;
   flex-direction: column;
+=======
+  
+}
+.page-background{
+  background-color: #C7CCB7;
+>>>>>>> 942321ec7b4dcebf531a346e73b9728bd7600a0d
 }
 
 .main-container {
@@ -111,6 +118,105 @@ body {
   background-color: rgb(81, 0, 243);
 }
 
+<<<<<<< HEAD
+=======
+/* Loggan */
+.logo {
+  position: absolute; 
+  left: 20px;
+  top: 20px;
+  width: 300px;
+  height: auto;
+  
+}
+
+
+.navbar {
+  
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  padding: 40px 0px;
+  text-align: end;
+}
+.navbar a {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(5, 98, 31);
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: "Katibeh";
+  font-size: 60px;
+}
+
+.navbar a:hover {
+  color: #45a049;
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.2);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  
+  margin-bottom: 30px;
+}
+
+
+
+/* Footer */
+Footer {
+  display: flex;
+  background-color: #3c4d0c;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5rem;
+}
+.footer-left{
+  font-size: 2rem;
+  display: flex;
+  text-align: left;
+}
+.footer-center{
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.socialmedia-icons{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-top: 20px;
+  
+}
+.footer-empty{
+  
+  width: 100px;
+  height: 100px;
+
+}
+.footer-icon{
+  display: flex;
+  justify-content: center;
+}
+
+.phone-link{
+  color: #ffffff;
+}
+
+/* Responsiv design */
+>>>>>>> 942321ec7b4dcebf531a346e73b9728bd7600a0d
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
@@ -132,6 +238,47 @@ body {
     font-size: 16px;
     padding: 10px 20px;
   }
+<<<<<<< HEAD
+=======
+  
+
+  .logo {
+    display: flex;
+    
+    width: 13rem;
+    height: auto;
+       
+    
+  }
+  
+  
+  footer {
+    margin-top:  50px;
+    flex-direction: column; /* Stapla sektionerna vertikalt i mobil */
+    padding: 0px 0px; /* Justera padding för bättre responsivitet */
+    
+    
+  }
+
+  .footer-left,
+  .footer-center {
+    text-align: left; /* Justera till vänster för båda sektionerna */
+    width: 100%; /* Se till att de tar upp hela bredden */
+    margin: 5px 0; /* Lägg till lite mellanrum mellan sektionerna */
+  }
+
+  .footer-left {
+    font-size: 30px; /* Minska storleken för att passa mobilskärm bättre */
+  }
+
+  .footer-center {
+    font-size: 20px; /* Minska storleken för bättre mobilupplevelse */
+  }
+
+  .footer-center p {
+    margin: 1px 0px; /* Minska mellanrummet mellan p-taggar */
+  }
+>>>>>>> 942321ec7b4dcebf531a346e73b9728bd7600a0d
 }
 
 @media (max-width: 480px) {
