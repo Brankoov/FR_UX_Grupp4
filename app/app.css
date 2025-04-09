@@ -135,11 +135,20 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-
+.navbar-mobile {
+  position: absolute;
+  top: 1.1em;
+  right: 70px; /* ändrat från 20px */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(5, 98, 31);
+  display: flex;
+  flex-direction: column;
+}
+/*
 .navbar-mobile  {
-/*  flex: 1;
-  /* Tar upp resterande utrymme */
   display: flex;
   flex-direction: column;
   font-family: "Katibeh";
@@ -152,6 +161,7 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   color: rgb(5, 98, 31);
 }
+  */
 
 .navbar-mobile a {
  /* display: inline-block;
