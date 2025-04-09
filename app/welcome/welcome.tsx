@@ -18,24 +18,62 @@ export function Welcome() {
               människor. Sandra, grundaren bakom Sandys, lagar all mat från
               grunden med noga utvalda ingredienser och samarbeten med lokala
               producenter som brödet från bagaren i Göteborg och köttet från
-              kötthandlaren Tina intill.
-              <br />
-              <br />
-              Förvänta dig vällagad, smakrik mat med en personlig touch oavsett
-              om du är ute efter en snabb lunch eller något riktigt gott att ta
-              med.
+              kötthandlaren Tina intill. Förvänta dig vällagad, smakrik mat med
+              en personlig touch oavsett om du är ute efter en snabb lunch eller
+              något riktigt gott att ta med.
             </p>
-            <Link to="/kontakt">
-              <button className="kontakt-button">Bokningsförfrågan</button>
-            </Link>
           </div>
           <div className="welcome-image">
-            <img src="/formulärbild.png" alt="Sandra i foodtrucken" />
+            <img src="images/formulärbild.png" alt="bild på sandra" />
+          </div>
+        </div>
+        <Link to="/kontakt" style={{ textDecoration: "none" }}>
+          <button className="kontakt-button">Bokningsförfrågan</button>
+        </Link>
+      </section>
+
+      <section className="social-section">
+        <div className="social-container">
+          <h1> se vart vi är just nu- Följ oss på sociala medier </h1>
+          <div className="social-icons">
+            <a href="https://www.facebook.com/p/Sandys-Food-Truck-Catering-61565706599006/">
+              <img src="/images/Facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://www.instagram.com/sandysfoodtruckochcatering/?hl=sv">
+              <img src="/images/Instagram.png" alt="Instagram" />
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="hero1"></section>
+      <section className="event-section">
+        <h1> vad passar ditt event?</h1>
+        <br />
+        <div className="event-container">
+          <div className="event-item">
+            <h3>Foodtruck - Matglädje på hjul!</h3>
+            <p>
+              Perfekt för utomhusevent, mingel och födelsedagar vi rullar in,
+              serverar och sprider matglädje direkt från vår färgsprakande
+              truck!
+            </p>
+            <img src="/images/startsid-matbild.jpg" alt="foodtruck" />
+          </div>
+          <div className="event-item">
+            <h3>Catering En sittande smakupplevelse!</h3>
+            <p>
+              För studenten, företagsevent eller födelsedagsfesten vi levererar
+              vällagad mat som serveras med omtanke och känsla, anpassat efter
+              dina önskemål. Välj mellan 3 olika bufféer.
+            </p>
+            <img src="/images/startsida-vanbild.png" alt="catering" />
+          </div>
+        </div>
+
+        <Link to="/kontakt" style={{ textDecoration: "none" }}>
+          <button className="kontakt-button">Bokningsförfrågan</button>
+        </Link>
+      </section>
 
       <Footer />
     </main>
