@@ -443,23 +443,50 @@ footer a:hover {
 /* Sektionstitlar */
 .menu-intro {
   text-align: center;
-  margin: 50px 0;
+  margin: 40px 0;
   font-size: 5rem;
-  font-family: "Katibeh" , sans-serif;
+  font-family: "Katibeh", sans-serif;
   color: #301F06;
-
 }
 
 .menu-intro h1 {
   font-size: 5rem;
   color: #301F06;
-  font-family: "Katibeh";
+  font-family: "Katibeh", sans-serif;
 }
 
 .menu-intro p {
   font-size: 2.5rem;
   color: #301F06;
 }
+
+.cover-button-menu {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0; /* Justerat för lite mer space både över och under */
+}
+
+.kontakt-button-menu {
+  display: inline-block;
+  background-color: #f7b900;
+  color: black;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.kontakt-button-menu:hover {
+  background-color: #f7b900;
+  color: white;
+}
+
+
+
 
 /* Buffé- och menysektion - 3 kolumner */
 .buffet-grid, .menu-grid {
@@ -508,3 +535,4 @@ footer a:hover {
 }
 
 /*/////////////////////Meny Styling ////////////////////////////*/
+
