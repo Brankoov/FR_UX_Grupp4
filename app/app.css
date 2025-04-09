@@ -13,6 +13,7 @@ body {
 }
 
 .main-container {
+  margin-top: 120px;
   text-align: center;
   font-family: "Katibeh";
   font-size: 96px;
@@ -60,15 +61,25 @@ body {
 .kontakt-button:active {
   background-color: rgb(81, 0, 243);
 }
+.logohb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
 
 /* Loggan */
 .logo {
-  position: absolute;
+  position: static; 
   left: 20px;
   top: 20px;
   width: 300px;
   height: auto;
+  
 }
+
 
 .navbar a {
   margin-right: 50px;
@@ -78,7 +89,7 @@ body {
   background-color: transparent;
   position: relative;
   top: 0;
-  left: 0;
+  align-content:left;
   width: 100%;
   z-index: 0;
   padding: 30px 0;
@@ -102,29 +113,81 @@ body {
   background-color: rgba(255, 255, 255, 0.4);
   transform: scale(1.2);
 }
+.hamburger {
+  position: static; /* så den följer flex-raden */
+  font-size: 2em;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: none; /* visas bara på mobil */
+} 
 
 .nav-links {
+  display: none; /* Dölj navigationsmenyn som standard */
+  flex-direction: column;
+  gap: 10px;
+  background-color: #444; /* Ge menyn en bakgrundsfärg */
+  position: absolute;
+  top: 50px; /* Placera menyn under navbaren */
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.navbar-mobile  {
+/*  flex: 1;
+  /* Tar upp resterande utrymme */
   display: flex;
   flex-direction: column;
+  font-family: "Katibeh";
+  position: absolute;
+  top: 1.1em;
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(5, 98, 31);
 }
 
-.hamburger {
-  display: none;
-
-
+.navbar-mobile a {
+ /* display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px; */
+  background-color: #FFF; /* Ge menyn en bakgrundsfärg */
+  color: rgb(5, 98, 31);
+  text-decoration: none;
+  /*transition: background-color 0.3s ease, transform 0.2s ease;*/
+  font-family: "Katibeh";
+  top: 50px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 30px;
 }
-
-.navbar-mobile {
-  display: flexbox;
-  flex-direction: column;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 20px 3rem 0;
+  position: relative;
+  z-index: 10;
 }
-
+/*
 
 header {
+  position: relative;
+  height: 100px;
+  z-index: 10;
   text-align: center;
   margin-bottom: 30px;
-}
 
+}
+*/
 /* Kontaktformulär */
 .contact-container {
   display: flex;
@@ -315,6 +378,7 @@ footer a:hover {
   }
 
   .main-container {
+
     flex-direction: column;
     font-size: 48px;
     min-height: auto;
@@ -336,11 +400,9 @@ footer a:hover {
   }
 
   .logo {
-    width: 220px;
+    position: static; /* inte absolute längre */
+    width: 10rem;
     height: auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .contact-form {
