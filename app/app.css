@@ -1,7 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 /* Grundläggande reset */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
 }
 
@@ -10,6 +14,11 @@ body {
   background-color: #fffbf5;
   height: 100%;
   line-height: 1.6;
+  
+  
+}
+.page-background{
+  background-color: #C7CCB7;
 }
 
 .main-container {
@@ -45,7 +54,7 @@ body {
   color: white;
   font-size: 20px;
   font-weight: bold;
-  padding: 15px 30px;
+  padding: 15px 30px; 
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -72,6 +81,7 @@ body {
 
 /* Loggan */
 .logo {
+  position: absolute; 
   position: static; 
   left: 20px;
   top: 20px;
@@ -85,20 +95,22 @@ body {
   margin-right: 50px;
 }
 
+
 .navbar {
-  background-color: transparent;
+  
   position: relative;
   top: 0;
   align-content:left;
   width: 100%;
   z-index: 0;
-  padding: 30px 0;
+  padding: 40px 0px;
   text-align: end;
 }
 
 .navbar a {
   display: inline-block;
-  padding: 10px 20px;
+  margin-right: 20px;
+  padding: 10px;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.2);
   color: rgb(5, 98, 31);
@@ -217,6 +229,10 @@ header {
   flex-direction: row;
 
   background-color: #3c4d0c;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -225,20 +241,24 @@ header {
   margin-bottom: 120px;
   padding-bottom: auto;
 }
+.footer-left{
+  font-size: 2rem;
 
 /*Höger sektion*/
 .form-container {
   flex: 1;
   /* Tar upp resterande utrymme */
   display: flex;
-  flex-direction: column;
+  text-align: left;
 }
-
-/* Vänstra sektionen */
-.form-left {
+.footer-center{
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+}
+.socialmedia-icons{
   flex: 1;
   /* Gör att vänstra sektionen tar upp ett flexibelt utrymme */
   max-width: 45%;
@@ -286,6 +306,18 @@ header {
   width: 100%;
   color: #ffffff;
   display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-top: 20px;
+  
+}
+.footer-empty{
+  
+  width: 100px;
+  height: 100px;
+
+}
+.footer-icon{
   flex-direction: column;
 
 
@@ -337,54 +369,26 @@ footer {
   margin-top: auto;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  padding: 100px;
-  background-color: #3c4d0c;
-  color: #fff;
+  justify-content: center;
 }
 
-.footer-left {
-  position: relative;
-  bottom: 50px;
-  font-size: 30px;
-  text-align: left;
-}
-
-.footer-center {
-  position: relative;
-  bottom: 55px;
-  left: 25%;
-  font-size: 20px;
-}
-
-.footer-center p {
-  margin: 10px 0;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.phone-link {
-  color: white;
-  text-decoration: none;
-}
-
-.phone-link:hover {
-  text-decoration: underline;
+.phone-link{
+  color: #ffffff;
 }
 
 /* Responsiv design */
 @media (max-width: 768px) {
   .navbar {
-    text-align: center;
-    position: relative;
-    top: 80px;
-    left: 0;
+    display: flex;
+    
+    
+    
+    top: 4.5rem;
+    
   }
 
   .navbar a {
-    font-size: 30px;
+    font-size: 40px;
   }
 
   .main-container {
@@ -408,11 +412,50 @@ footer a:hover {
     font-size: 16px;
     padding: 10px 20px;
   }
+  
 
   .logo {
+    display: flex;
+    
+    width: 13rem;
     position: static; /* inte absolute längre */
     width: 10rem;
     height: auto;
+       
+    
+  }
+  
+  
+  footer {
+    margin-top:  50px;
+    flex-direction: column; /* Stapla sektionerna vertikalt i mobil */
+    padding: 0px 0px; /* Justera padding för bättre responsivitet */
+    
+    
+  }
+
+  .footer-left,
+  .footer-center {
+    text-align: left; /* Justera till vänster för båda sektionerna */
+    width: 100%; /* Se till att de tar upp hela bredden */
+    margin: 5px 0; /* Lägg till lite mellanrum mellan sektionerna */
+  }
+
+  .footer-left {
+    justify-content: center;
+    font-size: 30px; /* Minska storleken för att passa mobilskärm bättre */
+  }
+
+  .footer-center {
+    font-size: 20px; /* Minska storleken för bättre mobilupplevelse */
+  }
+
+  .footer-center p {
+    margin: 1px 0px; /* Minska mellanrummet mellan p-taggar */
+  }
+}
+  
+
   }
 
   .contact-form {
