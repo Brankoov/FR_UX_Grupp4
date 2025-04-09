@@ -22,7 +22,7 @@ export const foods: Menu[] = [
       id: 2,
       name: "Pulled Pork burger",
       price: 150,
-      description: "Långbakad karré med coleslaw, picklad rödlök i brichosbröd",
+      description: "Långbakad karré med coleslaw, picklad rödlök i briochebröd",
       category: "Tacos",
       image:  "/images/img_menu_Pulled pork burger.jpg"
   
@@ -31,7 +31,7 @@ export const foods: Menu[] = [
       id: 3,
       name: "Deepfried Avokado",
       price: 120,
-      description: "Sandys friterade avokado toppad med picklad röklök och kålsallad",
+      description: "Sandys friterade avokado toppad med picklad rödlök och kålsallad",
       category: "Drinks",
       image:  "/images/img_menu_Fried avokado.jpg"
   
@@ -41,14 +41,14 @@ export const foods: Menu[] = [
         id: 4,
         name: "Pulled beef burger",
         price: 120,
-        description: "Långbakad högrev  med coleslaw, picklad rödlök i brichosbröd ",
+        description: "Långbakad högrev  med coleslaw, picklad rödlök i briochebröd ",
         category: "Burgers",
         image:  "/images/img_menu_Beef burger.jpg"
     
       },
       {
         id: 5,
-        name: "Nachostalltrik",
+        name: "Nachostallrik",
         price: 120,
         description: "Krispiga nachos med het tomatsalsa, toppad med ost, koriander, majs, lime & krutonger",
         category: "Tacos",
@@ -57,9 +57,9 @@ export const foods: Menu[] = [
       },
       {
         id: 6,
-        name: "Sandys friterade rökor i bröd",
+        name: "Sandys friterade räkor i bröd",
         price: 120,
-        description: "Pankofriterad vannameiräka i mjukt tortilliabröd. Serveras med vitlöksdressing & picklad rödlök krispig kålsallad",
+        description: "Pankofriterad vannameiräka i mjukt tortillabröd. Serveras med vitlöksdressing & picklad rödlök krispig kålsallad",
         category: "Drinks",
         image:  "/images/img_menu_Fried Chicken.jpg"
     

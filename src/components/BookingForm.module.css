@@ -18,7 +18,7 @@
 }
 
 .form-section {
-  gap:3rem;
+  align-items: flex-start;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -28,17 +28,18 @@
 
 .intro-section {
   
-  flex:0.67;
-  margin-left: 3rem;
+  align-self: flex-start; /* så den hamnar i höjd med formuläret */
+  flex: 1;
+  min-width: 300px;       /* så den inte blir för liten */
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  margin-left: 2rem;
 }
 
 .intro-text {
-  width: 70%;
+  width: 85%;
   background-color: white;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
@@ -49,15 +50,16 @@
 }
 
 .form-image {
-  width: 70%;
-  height: auto;
+
+  width: 85%;
+  height: 450px;
   border-radius: 1rem;
-  object-fit: cover;
+  
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-clean {
-  flex: 1;
+  flex: 1.2;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -86,7 +88,7 @@
   }
 
 .form-group label {
-  font-weight: 600;
+  font-weight: 600px;
   margin-bottom: 0.5rem;
 }
 
@@ -120,9 +122,8 @@ textarea {
   justify-content: center; 
   align-items: center;
   color: rgb(4, 3, 3);
-  border: none;
-  border-radius: 0.5rem;
-  font-weight: bold;
+  
+  
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   
@@ -132,8 +133,13 @@ textarea {
 .form-clean button {
   justify-content: center; 
   align-items: center;
-  padding: 0.4rem;
+  padding: 0.8rem;
   background-color: #FFC13B;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
   
 }
 
@@ -145,6 +151,38 @@ textarea {
   background-color: #ccc;
   cursor: not-allowed;
 }
+.confirmation-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4BB543;
+    color: white;
+    padding: 20px 34px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: fadeInOut 5s ease-in-out;
+    font-weight: 500;
+  }
+  .field-text {
+    display: block;
+    margin-top: 4px;
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+    
+  }
+  .gdpr-error {
+    color: #b00020; /* Röd ton för varning */
+    background-color: #ffe6e6; /* Ljus röd bakgrund */
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    max-width: 400px;
+  } 
+  
+  
 
 
 /* MOBIL VERSION */
@@ -190,5 +228,12 @@ textarea {
   
     .button-container {
       justify-content: center;
+      color: rgb(4, 3, 3);
     }
+  }
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(20px); }
   }

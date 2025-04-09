@@ -1,37 +1,22 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
-
+import { type bookingFormData } from "data/bookingFormData"
 import styles from "./BookingForm.module.css";
 
 const BookingForm = () => {
-    const [formData, setFormData] = useState<{
-        name: string;
-        lastname:string;
-        email: string;
-        Telnumber: string;
-        eventDate: string;
-        numberOfPeople: string,
-        eventAdress: string;
-        serveTime: string,
-        subject: string;
-        message: string;
-        bookingType: string;
-        cateringType: string,
-        //eventServices: string[]; // Här specificeras att det är en array av strängar
-    }>({
+    const [formData, setFormData] = useState<bookingFormData>({
         name: "",
-        lastname:"",
+        lastname: "",
         email: "",
         Telnumber: "",
         eventDate: "",
         numberOfPeople: "",
         eventAdress: "",
-        serveTime:"",
+        serveTime: "",
         subject: "",
         message: "",
         bookingType: "",
         cateringType: "",
-        //eventServices: [], // Tom array från början
     });
 
   const [errors, setErrors] = useState({});
@@ -39,6 +24,8 @@ const BookingForm = () => {
   const [gdprAccepted, setGdprAccepted] = useState<boolean>(false);
 
   const [gdprError, setGdprError] = useState<boolean>(false);
+
+  const [showConfirmation, setShowConfirmation] = useState<boolean>(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
@@ -133,8 +120,11 @@ const BookingForm = () => {
       .then(
         (result: any) => {
           console.log("Email sent successfully:", result);
-          alert("Formuläret skickades!");
+          
+          setShowConfirmation(true); // Visa popup
+          setTimeout(() => setShowConfirmation(false), 5000); // Dölj efter 5 sekunder
         },
+        
         (error: any) => {
           console.log("Error sending email:", error);
           alert("Något gick fel. Försök igen senare.");
@@ -201,11 +191,16 @@ const BookingForm = () => {
                 <div className={styles['form-group']}>
                  <label htmlFor="serveTime">När ska maten serveras?</label>
                  <input type="text" id="serveTime" name="serveTime" value={formData.serveTime} onChange={handleChange} />
+                 <small className={styles['field-text']}>
+                    Vi är alltid på plats 30 min innan och sätter upp.
+                </small>
                 </div>
                 <div className={styles['form-group']}>
                  <label htmlFor="eventDate">Vilket datum?*</label>
                  <input type="date" id="eventDate" name="eventDate" value={formData.eventDate} onChange={handleChange} required />
              </div>
+             <div className={`${styles['form-group']} ${styles['form-group-full']}`}></div>
+             <div className={`${styles['form-group']} ${styles['form-group-full']}`}></div>
           <div className={styles['form-group']}>
             <label>Förnamn*</label>
             <input type="text" name="name" value={formData.name} onChange={handleChange} required />
@@ -224,9 +219,9 @@ const BookingForm = () => {
           </div>
           
 
-          <div className={styles['form-group']}>
+          <div className={`${styles['form-group']} ${styles['form-group-full']}`}>
             <label>Kommentar</label>
-            <textarea name="message" value={formData.message} onChange={handleChange} rows={5}></textarea>
+            <textarea name="message" value={formData.message} placeholder="Skriv önskemål/eventuella allergener..." onChange={handleChange} rows={5}></textarea>
           </div>
 
           <div className={styles['checkbox-row']}>
@@ -236,13 +231,18 @@ const BookingForm = () => {
             </label>
           </div>
           
-          <button type="submit" disabled={!gdprAccepted}>Skicka</button>
+          <button type="submit">Skicka</button>
           {gdprError && (
-            <div className={styles['gdpr-tooltip']}>
-                Du måste godkänna integritetspolicyn
+            <div className={styles['gdpr-error']}>
+                Du måste godkänna integritetspolicyn för att kunna skicka formuläret.
             </div>
             )}
         </form>
+         {showConfirmation && (
+        <div className={styles['confirmation-popup']}>
+          <p>Tack för din bokning!<br />Vi återkopplar till dig snarast.</p>
+        </div>
+        )}
       </div>
     </div>
   );
