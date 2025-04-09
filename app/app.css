@@ -223,6 +223,7 @@ Footer {
   }
 
   .footer-left {
+    justify-content: center;
     font-size: 30px; /* Minska storleken för att passa mobilskärm bättre */
   }
 
