@@ -28,13 +28,13 @@ export function Welcome() {
           </div>
         </div>
         <Link to="/kontakt" style={{ textDecoration: "none" }}>
-          <button className="kontakt-button">Bokningsförfrågan</button>
+          <button className="kontakt-button-start">Bokningsförfrågan</button>
         </Link>
       </section>
 
       <section className="social-section">
         <div className="social-container">
-          <h1> se vart vi är just nu- Följ oss på sociala medier </h1>
+          <h1> Se vart vi är just nu- Följ oss på sociala medier. </h1>
           <div className="social-icons">
             <a href="https://www.facebook.com/p/Sandys-Food-Truck-Catering-61565706599006/">
               <img src="/images/Facebook.png" alt="Facebook" />
@@ -47,7 +47,7 @@ export function Welcome() {
       </section>
 
       <section className="event-section">
-        <h1> vad passar ditt event?</h1>
+        <h1> Vad passar ditt event?</h1>
         <br />
         <div className="event-container">
           <div className="event-item">
@@ -71,7 +71,7 @@ export function Welcome() {
         </div>
 
         <Link to="/kontakt" style={{ textDecoration: "none" }}>
-          <button className="kontakt-button">Bokningsförfrågan</button>
+          <button className="kontakt-button-start">Bokningsförfrågan</button>
         </Link>
       </section>
 
