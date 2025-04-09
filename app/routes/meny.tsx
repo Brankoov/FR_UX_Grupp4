@@ -31,25 +31,31 @@ const MenuSection: React.FC = () => {
     <div className="menu-container">
       <Header />
 
+     
       {/* Hero Image */}
-      <div className="hero-image">
+ <div className="hero-image">
         <img 
           src="images/img_menu_cover.jpg" 
           alt="Catering meny" 
         />
       </div>
-      
       {/* Catering Meny Sektion */}
       <section className="menu-intro">
+
+         <div>
         <h1>Catering meny</h1>
         <p>Våra bufféer går att anpassa efter era preferenser, skicka en förfrågan!</p>
-        <div className="cover-button-menu">
-           <Link to="/kontakt">
-             <button className="kontakt-button">bokningsförfrågan</button>
-           </Link>
+        
         </div>
+       
 
       </section>
+      <div className="cover-button-menu">
+          <Link to="/kontakt">
+         <button className="kontakt-button-menu">bokningsförfrågan</button>
+         </Link>
+        </div>
+
 
       {/* Buffé Sektion */}
       <section className="buffet-grid">
