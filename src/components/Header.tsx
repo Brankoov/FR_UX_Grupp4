@@ -7,7 +7,7 @@ const Header = () => {
       <a href="/meny">Meny</a>
       <a href="/kontakt">Boka</a>            
     </nav>          
-    <img src="/images/Sandys_LOGO.png" alt="Logga" className="logo" />
+    <img src="/images/Sandys-logo.png" alt="Logga" className="logo" />
   </header>
   );
 }
