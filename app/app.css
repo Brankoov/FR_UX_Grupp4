@@ -66,10 +66,25 @@ body {
 .kontakt-button:active {
   background-color: rgb(81, 0, 243);
 }
-
+.logohb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px; /* valfritt: begränsa bredd */
+  margin: 0 auto;
+}
+/*
+.logohb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+*/
 /* Loggan */
 .logo {
-  position: absolute; 
+  position: static; 
   left: 20px;
   top: 20px;
   width: 300px;
@@ -82,12 +97,25 @@ body {
   
   position: relative;
   top: 0;
-  left: 0;
+ /* left: 0; */
+  align-content:left;
   width: 100%;
   z-index: 0;
-  padding: 40px 0px;
+  padding: 30px 0px;
   text-align: end;
 }
+.navbar a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(5, 98, 31);
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: "Katibeh";
+  font-size: 60px;
+}
+/*
 .navbar a {
   display: inline-block;
   margin-right: 20px;
@@ -100,23 +128,83 @@ body {
   font-family: "Katibeh";
   font-size: 60px;
 }
-
+*/
 .navbar a:hover {
   color: #45a049;
   background-color: rgba(255, 255, 255, 0.4);
   transform: scale(1.2);
 }
+.hamburger {
+  position: static; /* så den följer flex-raden */
+  font-size: 2em;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: none; /* visas bara på mobil */
+} 
 
 .nav-links {
   display: flex;
   flex-direction: column;
 }
+.navbar-mobile {
+  position: absolute;
+  top: 1.1em;
+  right: 70px; /* ändrat från 20px */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgb(5, 98, 31);
+  display: flex;
+  flex-direction: column;
+}
 
+
+.navbar-mobile a {
+   background-color: #FFF; /* Ge menyn en bakgrundsfärg */
+  color: rgb(5, 98, 31);
+  text-decoration: none;
+  /*transition: background-color 0.3s ease, transform 0.2s ease;*/
+  font-family: "Katibeh";
+  top: 50px;
+  right: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 30px;
+}
+.navbar-mobile a:hover {
+  color: #45a049;
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centrera innehåll horisontellt */
+  height: 150px; /* öka höjd för att få plats med loggan */
+  padding-top: 30px; /* flytta ner lite från toppen */
+  background-color: white;
+}
+/*
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 20px 3rem 0;
+  position: relative;
+  z-index: 10;
+}
+  */
+/*
 header {
   
   margin-bottom: 30px;
 }
-
+*/
 
 
 /* Footer */
@@ -163,7 +251,29 @@ Footer {
 }
 
 /* Responsiv design */
+@Media (max-width: 955px) {
+  .navbar {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-flex;
+  }
+}
+
 @media (max-width: 768px) {
+
+  .navbar {
+    text-align: center;
+    position: relative;
+    top: 80px;
+    left: 0;
+  }
+
+  .navbar a {
+    font-size: 30px;
+  }
+/*
   .navbar {
     display: flex;
     
@@ -175,7 +285,7 @@ Footer {
   .navbar a {
     font-size: 40px;
   }
-
+*/
   .main-container {
     flex-direction: column;
     font-size: 48px;
@@ -196,8 +306,14 @@ Footer {
     font-size: 16px;
     padding: 10px 20px;
   }
-  
-
+/* 
+  .logo {
+    position: static;
+    width: 10rem;
+    height: auto;
+  }
+*/
+/*
   .logo {
     display: flex;
     
@@ -206,8 +322,41 @@ Footer {
        
     
   }
-  
-  
+  */
+  header {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    padding: 10px 20px;
+  }
+
+  .logohb {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo {
+    width: 160px;
+    height: auto;
+    margin-top: 0;
+  }
+
+  .hamburger {
+    display: inline-flex;
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  .navbar-mobile {
+    top: 100px; /* skjuter ner mobilmenyn så den inte täcker logga/nav */
+    right: 10px;
+  }
+
   footer {
     margin-top:  50px;
     flex-direction: column; /* Stapla sektionerna vertikalt i mobil */
@@ -256,6 +405,7 @@ Footer {
     font-size: 14px;
     padding: 8px 16px;
   }
+
 
 }
 /*/////////////////////Meny Styling ////////////////////////////*/
