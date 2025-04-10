@@ -521,6 +521,15 @@ footer a:hover {
   margin-top: 50px;
 }
 
+.buffet-category ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.buffet-category li {
+  margin-bottom: 6px;
+}
 /* Responsiv anpassning */
 @media (max-width: 1024px) {
   .buffet-grid, .menu-grid {
