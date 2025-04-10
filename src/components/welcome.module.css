@@ -238,4 +238,7 @@ a {
     width: 35px;
     height: 35px;
   }
+  .welcomeSection .kontakt-button-start {
+    margin-top: 40px;
+  }
 }

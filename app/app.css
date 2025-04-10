@@ -184,7 +184,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center; /* centrera innehåll horisontellt */
-  height: 150px; /* öka höjd för att få plats med loggan */
+  height: 170px; /* öka höjd för att få plats med loggan */
   padding-top: 30px; /* flytta ner lite från toppen */
   background-color: white;
 }

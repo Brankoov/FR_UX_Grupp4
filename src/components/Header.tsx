@@ -18,7 +18,8 @@ const Header = () => {
   return (
     <header>
       <div className="logohb">
-        <img src="/images/Sandys-logo.png" alt="Logga" className="logo" />
+      <a href="/">
+        <img src="/images/Sandys-logo.png" alt="Logga" className="logo" /></a>
 
         <nav className="navbar">
           <a href="/">Startsida</a>
