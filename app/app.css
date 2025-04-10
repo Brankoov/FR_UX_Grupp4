@@ -249,6 +249,15 @@ Footer {
 .phone-link{
   color: #ffffff;
 }
+.buffet-category ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+ 
+.buffet-category li {
+  margin-bottom: 6px;
+}
 
 /* Responsiv design */
 @Media (max-width: 955px) {
