@@ -142,14 +142,19 @@ const BookingForm = () => {
             
             <p>
             Vill du boka vår foodtruck till ditt event, bröllop, företagsfest eller kanske bara en riktigt 
-            god stund tillsammans? 
-            Vi älskar att skapa matupplevelser där passion, tradition och glädje möts!
-            Fyll i dina uppgifter så kommer det snart en bekräftelse och mer info. Ju mer du berättar om dina önskemål, 
-            desto bättre kan vi anpassa upplevelsen – allt från meny till tider och eventuella allergier.
-            Vi ser fram emot att höra från dig!
+            god stund tillsammans?
+            </p>
+            <p> 
+            Vi älskar att skapa matupplevelser där passion, 
+            tradition och glädje möts!
             </p>
             <p>
-              Oavsett vilket koncept du möts av, kan du räkna med en måltid lagad med omsorg och hjärta.
+              Fyll i dina uppgifter så kommer det snart en bekräftelse och mer info. Ju mer du berättar om dina önskemål, 
+              desto bättre kan vi anpassa upplevelsen – allt från meny till tider och eventuella allergier.
+            </p>
+            
+            <p>
+              Vi ser fram emot att höra från dig!
             </p>
           </div>
           <img src="/images/formulärbild2.png" alt="Foodtruck" className={styles['form-image']} />
