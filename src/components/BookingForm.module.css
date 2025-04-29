@@ -1,0 +1,240 @@
+.contact-wrapper {
+  background-color: #C7CCB7;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.intro-titel {
+  
+  font-family: "Katibeh";
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-section {
+  align-items: flex-start;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  
+  
+}
+
+.intro-section {
+  
+  align-self: flex-start; /* så den hamnar i höjd med formuläret */
+  flex: 1;
+  min-width: 300px;       /* så den inte blir för liten */
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.intro-text {
+  font-size: 18px;
+  width: 85%;
+  background-color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.intro-text p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.form-image {
+
+  width: 85%;
+  height: 450px;
+  border-radius: 1rem;
+  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-clean {
+  flex: 1.2;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  background: transparent;
+  padding: 0.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 1;
+}
+
+.form-group-full {
+  grid-column: span 2;
+}
+.form-group-row {
+    grid-column: span 2;
+    
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: flex-end; /* så fälten linjerar snyggt */
+    flex-wrap: wrap; /* så de inte går utanför på små skärmar */
+  }
+
+.form-group label {
+  font-weight: 600px;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.checkbox-row {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-row input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.button-container {
+  grid-column: span 2;
+  display: flex;
+  
+  justify-content: center; 
+  align-items: center;
+  color: rgb(4, 3, 3);
+  
+  
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  
+  background-color: #FFC13B;
+}
+
+.form-clean button {
+  justify-content: center; 
+  align-items: center;
+  padding: 0.8rem;
+  background-color: #FFC13B;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  
+}
+
+.form-clean button:hover {
+  background-color: #ca921b;
+}
+
+.form-clean button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.confirmation-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4BB543;
+    color: white;
+    padding: 20px 34px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: fadeInOut 5s ease-in-out;
+    font-weight: 500;
+  }
+  .field-text {
+    display: block;
+    margin-top: 4px;
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+    
+  }
+  .gdpr-error {
+    color: #b00020; /* Röd ton för varning */
+    background-color: #ffe6e6; /* Ljus röd bakgrund */
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-top: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    max-width: 400px;
+  } 
+  
+  
+
+
+/* MOBIL VERSION */
+@media (max-width: 768px) {
+    .form-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .intro-titel {
+  
+        font-family: "Katibeh";
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+  
+    .form-clean {
+      grid-template-columns: 1fr;
+      width: 90%;
+      padding: 1rem 0;
+    }
+  
+    .form-group,
+    .form-group-full,
+    .form-group-row {
+      grid-column: span 1;
+      width: 100%;
+    }
+  
+    .intro-section {
+      order: 2;
+      margin-left: 0;
+      align-items: center;
+    }
+  
+    .intro-text,
+    .form-image {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .button-container {
+      justify-content: center;
+      color: rgb(4, 3, 3);
+    }
+  }
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(20px); }
+    10% { opacity: 1; transform: translateY(0); }
+    90% { opacity: 1; }
+    100% { opacity: 0; transform: translateY(20px); }
+  }

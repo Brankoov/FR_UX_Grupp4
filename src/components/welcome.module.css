@@ -1,0 +1,244 @@
+html,
+body {
+  background-color: white;
+  height: 100%;
+ 
+  line-height: 1.6;
+}
+ 
+.welcomeSection {
+  background-color: #c7ccb7;
+  padding: 40px 20px;
+}
+ 
+.welcome-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 40px;
+}
+ 
+.welcome-text {
+  flex: 1;
+  padding: 30px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  text-align: center;
+  box-sizing: border-box;
+  height: auto;
+}
+ 
+.welcome-text h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+ 
+.welcome-text h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+ 
+.welcome-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+ 
+/* Bild bredvid text */
+.welcome-image {
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+}
+ 
+.welcome-image img {
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+ 
+/* ==== BOKNINGS-KNAPP ==== */
+.kontakt-button-start {
+  display: inline-block;
+  margin: 20px auto;
+  background-color: #f7b900;
+  color: black;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+ 
+a {
+  display: block;
+  text-align: center;
+}
+ 
+.kontakt-button-start:hover {
+  background-color: #e6a800;
+}
+ 
+/* ==== SOCIALA MEDIER-SEKTION ==== */
+ 
+.social-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+ 
+.social-section {
+  margin-top: 20px;
+}
+ 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+ 
+.social-icons a {
+  display: inline-block; /* Gör bara ikonen klickbar */
+}
+ 
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  fill: black;
+  filter: brightness(0%) saturate(100%); /* Gör bilden svart */
+}
+ 
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+ 
+/* ==== EVENT SECTION ==== */
+ 
+.event-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+}
+ 
+.event-section h1 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+ 
+.event-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  align-items: stretch; /* Gör att alla items får samma höjd */
+}
+ 
+.event-item {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  height: 100%;
+}
+ 
+.event-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.event-item:first-child img {
+  margin-top: 30px;
+}
+ 
+.event-item h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+ 
+.event-item p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+@media (max-width: 767px) {
+  /* Welcome section */
+  .welcome-container {
+    flex-direction: column; /* Stacks the text and image vertically */
+    gap: 20px;
+  }
+ 
+  .welcome-text h1 {
+    font-size: 28px;
+  }
+ 
+  .welcome-text h2 {
+    font-size: 18px;
+  }
+ 
+  .welcome-text p {
+    font-size: 16px;
+  }
+ 
+  .welcome-image img {
+    width: 80%;
+    max-width: 300px;
+    display: block; /* Gör bilden som ett blockelement */
+    margin: 0 auto; /* Centrerar bilden horisontellt */
+  }
+ 
+  /* Event section */
+  .event-container {
+    gap: 20px;
+  }
+ 
+  .event-item {
+    flex: 1 1 100%; /* Makes each event item take up the full width */
+  }
+ 
+  .event-item img {
+    height: 200px;
+  }
+ 
+  /* Social section */
+  .social-icons {
+    gap: 20px;
+  }
+ 
+  .social-icons img {
+    width: 35px;
+    height: 35px;
+  }
+  .welcomeSection .kontakt-button-start {
+    margin-top: 40px;
+  }
+}
