@@ -1,0 +1,41 @@
+/* Exempel på mörkt tema */
+
+/*////////////////////////////////////////////*/
+
+body.dark-mode {
+    background-color: #121212; /* Mörk bakgrund */
+    color: #ffffff; /* Ljus textfärg */
+  }
+  
+  body.dark-mode .navbar {
+    background-color: #978e8e; /* Mörk bakgrund för navbar */
+  }
+  
+  body.dark-mode .kontakt-button {
+    background-color: rgba(17, 216, 33, 0.8); /* Justera knappfärg för mörkt läge */
+  }
+  
+  body.dark-mode .footer {
+    background-color: #978e8e; /* Mörk bakgrund för footer */
+  }
+  
+  /* Andra justeringar för mörkt läge */
+  body.dark-mode .navbar a {
+    color: #ffffff; /* Ljus text för navbar-länkar */
+  }
+  
+  body.dark-mode .navbar a:hover {
+    color: #45a049; /* Färg vid hover */
+  }
+  
+  body.dark-mode .kontakt-button:hover {
+    background-color: rgba(119, 0, 255, 0.9); /* Hover-effekt för knappen */
+  }
+  
+  body.dark-mode .hero1 {
+    color: #e0e0e0; /* Ljusare text på hero-sektionen */
+  }
+  
+  buffet-image {
+    filter: brightness(0.2); /* Mörkare bild för mörkt läge */
+  }
